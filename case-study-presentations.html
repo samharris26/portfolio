@@ -4,10 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kato Presentations — Sam Harris</title>
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -38,6 +34,15 @@
   .dot{width:7px;height:7px;border-radius:50%;background:#1DB954;animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 
+  .menu-btn{display:none;background:none;border:0;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);cursor:pointer;padding:6px 0}
+  .menu-btn::after{content:"menu"}
+  body.nav-open .menu-btn::after{content:"close"}
+  .mobile-nav{display:none}
+  body.nav-open{overflow:hidden}
+  body.nav-open .mobile-nav{display:flex;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--ink);z-index:50;flex-direction:column;padding:32px 24px 48px}
+  .mobile-nav a{font-family:var(--mono);font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--paper);text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(246,249,252,.12)}
+  .mobile-nav .status{margin-top:auto;align-self:flex-start;color:var(--paper);border-color:rgba(246,249,252,.3)}
+
   header{padding:96px 0 64px;border-bottom:1px solid var(--line)}
   .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
   .eyebrow span{color:var(--blue)}
@@ -55,7 +60,7 @@
   .shot.mid{height:380px}
   .hero-shot{margin:64px 0 0}
 
-  section.cs{padding:88px 0 8px}
+  section.cs{padding-top:88px;padding-bottom:8px}
   .cs-block{display:grid;grid-template-columns:280px 1fr;gap:48px;padding:0 0 80px}
   .cs-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);position:sticky;top:96px;align-self:start}
   .cs-label::before{content:"—— ";color:var(--blue)}
@@ -105,7 +110,8 @@
     .shot-row{grid-template-columns:1fr}
     .metrics{grid-template-columns:1fr}
     .metric{border-right:0;border-bottom:1px solid var(--line)}
-    .nav-links a:not(.keep){display:none}
+    .nav-links{display:none}
+    .menu-btn{display:block}
   }
 </style>
 </head>
@@ -120,6 +126,13 @@
       <a class="keep" href="contact.html">Contact</a>
       <span class="status"><span class="dot"></span>open to new roles</span>
     </div>
+    <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')"></button>
+  </div>
+  <div class="mobile-nav">
+    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
+    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
+    <a href="contact.html">Contact</a>
+    <span class="status"><span class="dot"></span>open to new roles</span>
   </div>
 </nav>
 
@@ -238,5 +251,6 @@
   </div>
 </footer>
 
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

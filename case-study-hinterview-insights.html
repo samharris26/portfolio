@@ -4,10 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hinterview Insights — Sam Harris</title>
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="case-study.css">
@@ -23,6 +19,13 @@
       <a class="keep" href="contact.html">Contact</a>
       <span class="status"><span class="dot"></span>open to new roles</span>
     </div>
+    <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')"></button>
+  </div>
+  <div class="mobile-nav">
+    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
+    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
+    <a href="contact.html">Contact</a>
+    <span class="status"><span class="dot"></span>open to new roles</span>
   </div>
 </nav>
 
@@ -113,5 +116,6 @@
 </footer>
 
 <script src="lightbox.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

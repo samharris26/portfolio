@@ -25,6 +25,15 @@ nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 8
 .dot{width:7px;height:7px;border-radius:50%;background:#1DB954;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 
+.menu-btn{display:none;background:none;border:0;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);cursor:pointer;padding:6px 0}
+.menu-btn::after{content:"menu"}
+body.nav-open .menu-btn::after{content:"close"}
+.mobile-nav{display:none}
+body.nav-open{overflow:hidden}
+body.nav-open .mobile-nav{display:flex;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--ink);z-index:50;flex-direction:column;padding:32px 24px 48px}
+.mobile-nav a{font-family:var(--mono);font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--paper);text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(246,249,252,.12)}
+.mobile-nav .status{margin-top:auto;align-self:flex-start;color:var(--paper);border-color:rgba(246,249,252,.3)}
+
 header{padding:96px 0 64px;border-bottom:1px solid var(--line)}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
 .eyebrow span{color:var(--blue)}
@@ -112,5 +121,6 @@ footer{background:var(--ink);color:var(--paper);padding:48px 0}
   .metric:last-child{border-bottom:0}
   .next a{margin:0;padding:48px 0}
   .lightbox{padding:20px}
-  .nav-links a:not(.keep){display:none}
+  .nav-links{display:none}
+  .menu-btn{display:block}
 }
