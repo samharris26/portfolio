@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam Harris — Designs it. Builds it.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F9FC;
+    --ink:#07122B;
+    --blue:#008DF4;
+    --blue-soft:#5FBCFF;
+    --muted:rgba(7,18,43,.55);
+    --line:rgba(7,18,43,.14);
+    --sans:'Space Grotesk',sans-serif;
+    --mono:'IBM Plex Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--blue);color:var(--paper)}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+  /* ---------- nav ---------- */
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .wordmark{font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-decoration:none;color:var(--ink)}
+  .wordmark b{color:var(--blue);font-weight:500}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+  .nav-links a:hover{color:var(--blue)}
+  .status{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:6px 12px}
+  .dot{width:7px;height:7px;border-radius:50%;background:#1DB954;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  /* ---------- hero ---------- */
+  header{padding:110px 0 72px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+  .eyebrow span{color:var(--blue)}
+  h1{font-weight:300;font-size:clamp(44px,7.2vw,96px);line-height:1.02;letter-spacing:-.025em;max-width:16ch}
+  h1 em{font-style:normal;font-weight:500;color:var(--blue)}
+  .hero-sub{margin-top:32px;font-size:19px;line-height:1.55;color:var(--muted);max-width:52ch}
+  .hero-sub b{color:var(--ink);font-weight:400}
+
+  /* prompt bar */
+  .prompt{margin-top:48px;max-width:640px;border:1px solid var(--ink);border-radius:10px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:13px;padding:14px 18px;display:flex;gap:10px;align-items:baseline;box-shadow:6px 6px 0 var(--blue)}
+  .prompt .p-sign{color:#1DB954}
+  .caret{display:inline-block;width:8px;height:15px;background:var(--paper);vertical-align:text-bottom;animation:blink 1s steps(1) infinite;margin-left:2px}
+  @keyframes blink{50%{opacity:0}}
+  .prompt-note{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:12px}
+
+  /* ---------- token marquee ---------- */
+  .tokens{border-bottom:1px solid var(--line);overflow:hidden;padding:14px 0;white-space:nowrap}
+  .tokens-inner{display:inline-block;animation:scroll 40s linear infinite}
+  .tokens span{font-family:var(--mono);font-size:12px;color:var(--muted);margin-right:40px}
+  .tokens span::before{content:"·";color:var(--blue);margin-right:40px}
+  .tokens span.hl{color:var(--blue)}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- metrics ---------- */
+  .metrics-band{border-bottom:1px solid var(--line)}
+  .metrics{display:grid;grid-template-columns:repeat(3,1fr)}
+  .metric{padding:44px 32px;border-right:1px solid var(--line)}
+  .metric:first-child{padding-left:0}
+  .metric:last-child{border-right:0;padding-right:0}
+  .metric .num{font-weight:300;font-size:clamp(40px,4.5vw,64px);line-height:1;letter-spacing:-.02em}
+  .metric .num sup{font-size:.45em;color:var(--blue);vertical-align:baseline;line-height:1}
+  .metric p{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:12px;letter-spacing:.04em}
+
+  /* ---------- work index ---------- */
+  section.work{padding:88px 0 40px}
+  .section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px}
+  h2{font-weight:300;font-size:15px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase}
+  h2::before{content:"—— ";color:var(--blue)}
+  .count{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+  .row{display:grid;grid-template-columns:64px 300px 1fr 190px;gap:24px;align-items:baseline;padding:26px 12px;margin:0 -12px;border-top:1px solid var(--line);text-decoration:none;color:var(--ink);position:relative;transition:background .18s,color .18s}
+  .row:last-of-type{border-bottom:1px solid var(--line)}
+  .row .idx{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .row .name{font-size:24px;font-weight:400;letter-spacing:-.01em}
+  .row .name em{font-style:normal;font-weight:500}
+  .row .outcome{font-size:15px;color:var(--muted);line-height:1.5}
+  .row .tags{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:99px;padding:4px 10px;color:var(--muted);transition:all .18s}
+  .row:hover{background:var(--ink);color:var(--paper)}
+  .row:hover .outcome,.row:hover .idx{color:rgba(245,243,238,.6)}
+  .row:hover .tag{border-color:rgba(245,243,238,.3);color:rgba(245,243,238,.7)}
+  .row.wip .name::after{content:" in build";font-family:var(--mono);font-size:11px;color:var(--blue);letter-spacing:.06em;vertical-align:baseline}
+
+  /* ---------- about ---------- */
+  section.about{padding:96px 0;border-top:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:48px}
+  .about p{font-size:22px;line-height:1.55;font-weight:300}
+  .about p+p{margin-top:22px}
+  .about p em{font-style:normal;font-weight:500;color:var(--blue)}
+  .about .side{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:2.1}
+  .about .side b{color:var(--ink);font-weight:500;display:block;margin-top:18px;letter-spacing:.1em}
+  .about .side b:first-child{margin-top:0}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:var(--paper);padding:104px 0 48px}
+  footer .big{font-weight:300;font-size:clamp(40px,6vw,84px);letter-spacing:-.02em;line-height:1.05}
+  footer .big em{font-style:normal;font-weight:500;color:var(--blue-soft)}
+  footer a.mail{display:inline-block;margin-top:36px;font-family:var(--mono);font-size:15px;color:var(--paper);text-decoration:none;border-bottom:1px solid var(--blue-soft);padding-bottom:4px;transition:color .2s}
+  footer a.mail:hover{color:var(--blue-soft)}
+  .foot-meta{display:flex;justify-content:space-between;margin-top:96px;font-family:var(--mono);font-size:11px;color:rgba(245,243,238,.45)}
+  .foot-meta a{color:rgba(245,243,238,.7);text-decoration:none}
+  .foot-meta a:hover{color:var(--blue-soft)}
+
+  @media(max-width:820px){
+    .metrics{grid-template-columns:1fr}
+    .metric{border-right:0;border-bottom:1px solid var(--line)}
+    .row{grid-template-columns:40px 1fr;grid-template-rows:auto auto auto;gap:8px 16px}
+    .row .outcome{grid-column:2}
+    .row .tags{grid-column:2}
+    .about-grid{grid-template-columns:1fr}
+    .nav-links a:not(.keep){display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="#"><b>~/</b>sam-harris</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a class="keep" href="contact.html">Contact</a>
+      <span class="status"><span class="dot"></span>open to new roles</span>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Product designer <span>×</span> AI-assisted front-end <span>×</span> 13 years</p>
+    <h1>I design products.<br>Then I <em>build</em> them.</h1>
+    <p class="hero-sub">Thirteen years turning complex problems into clear, usable products — and now shipping the production front-end too (with a little help from Claude). <b>One person, both halves, no handoff.</b></p>
+    <div class="prompt">
+      <span class="p-sign">➜</span>
+      <span id="typer"></span><span class="caret"></span>
+    </div>
+    <p class="prompt-note">// my actual workflow: design system in, production code out</p>
+  </div>
+</header>
+
+<div class="tokens" aria-hidden="true">
+  <div class="tokens-inner" id="tokenTrack">
+    <span>--color-ink: #07122B</span><span class="hl">98% paid on time</span><span>figma</span><span>claude</span><span class="hl">~£1m in transactions</span><span>design-tokens.json</span><span class="hl">zero to one</span><span>cursor</span><span>prototype → production</span><span class="hl">13 years experience</span><span>--space-md: 16px</span><span class="hl">0 handoffs</span>
+  </div>
+</div>
+
+<div class="metrics-band">
+  <div class="wrap metrics">
+    <div class="metric"><div class="num">98<sup>%</sup></div><p>organisations paid on time after the billing redesign</p></div>
+    <div class="metric"><div class="num">~£1m</div><p>annual spend flowing through journeys I designed</p></div>
+    <div class="metric"><div class="num">13<sup>yrs</sup></div><p>shipping real products used by real people</p></div>
+  </div>
+</div>
+
+<section class="work wrap" id="work">
+  <div class="section-head">
+    <h2>Selected work</h2>
+    <span class="count">2015 — present</span>
+  </div>
+
+  <a class="row" href="case-study-billing.html">
+    <span class="idx">01</span>
+    <span class="name">Kato <em>Society Billing</em></span>
+    <span class="outcome">From countless hours chasing invoices to 98% paid on time</span>
+    <span class="tags"><span class="tag">design</span><span class="tag">build</span><span class="tag">ai</span></span>
+  </a>
+  <a class="row" href="case-study-atlas.html">
+    <span class="idx">02</span>
+    <span class="name">Kato <em>Atlas</em></span>
+    <span class="outcome">A real-time commercial property data platform, zero to one</span>
+    <span class="tags"><span class="tag">design</span><span class="tag">build</span><span class="tag">ai</span></span>
+  </a>
+  <a class="row" href="case-study-design-system.html">
+    <span class="idx">03</span>
+    <span class="name">Kato <em>Design System</em></span>
+    <span class="outcome">One system, understood by designers, engineers — and Claude</span>
+    <span class="tags"><span class="tag">systems</span><span class="tag">build</span><span class="tag">ai</span></span>
+  </a>
+  <a class="row" href="case-study-noa.html">
+    <span class="idx">04</span>
+    <span class="name">Noa</span>
+    <span class="outcome">A shared operating system for families, a personal build</span>
+    <span class="tags"><span class="tag">build</span><span class="tag">ai</span></span>
+  </a>
+  <a class="row" href="case-study-venuescanner-dashboard.html">
+    <span class="idx">05</span>
+    <span class="name">VenueScanner <em>Dashboard</em></span>
+    <span class="outcome">Improved user control with the introduction of a dashboard</span>
+    <span class="tags"><span class="tag">design</span></span>
+  </a>
+  <a class="row" href="case-study-venuescanner-booking.html">
+    <span class="idx">06</span>
+    <span class="name">VenueScanner <em>Booking</em></span>
+    <span class="outcome">Maximising conversions with improved user experience</span>
+    <span class="tags"><span class="tag">design</span></span>
+  </a>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="side">
+      <b>CURRENTLY</b>
+      Product Designer, Kato<br>AI-assisted front-end
+      <b>PREVIOUSLY</b>
+      VenueScanner · Hinterview<br>Jones &amp; Palmer · MP Design
+      <b>TRAINED AT</b>
+      Memorisely · Shillington
+    </div>
+    <div class="about">
+      <p>I started my career in graphic design at Shillington, building a strong foundation in visual communication and core design principles. I later transitioned into product design through Memorisely, where I developed my approach to user-centred design, from problem definition through to prototyping and delivery.</p>
+      <p>Over the past <em>thirteen years</em>, I've designed and shipped products across B2B and consumer spaces, with a recent focus on SaaS platforms. I work closely with engineering and product teams to take ideas from early concept through to production, balancing speed, clarity, and attention to detail.</p>
+      <p>Today the role spans <em>design and build</em>. At Kato, I design and ship production front-end using AI-assisted development (Claude, Cursor), with our design system as the source of truth: everything from small tweaks and components through to full features. I've also rolled that capability out to the wider team, building Claude workflows that let anyone in product prompt high-fidelity, on-brand prototypes.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="big">Got a complex problem?<br><em>I'll take it from here.</em></p>
+    <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    <div class="foot-meta">
+      <span>© 2026 Sam Harris — designed &amp; built by me (and a bit of Claude)</span>
+      <span><a href="#">LinkedIn</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">CV</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // typing loop in the prompt bar
+  const lines = [
+    'prompt: "self-serve billing renewal" → 98% paid on time',
+    'prompt: "teach claude the design system" → the whole team designs',
+    'prompt: "prototype with real components" → live in the product',
+  ];
+  const el = document.getElementById('typer');
+  let li = 0, ci = 0, deleting = false;
+  function tick(){
+    const line = lines[li];
+    if(!deleting){
+      el.textContent = line.slice(0, ++ci);
+      if(ci === line.length){ deleting = true; return setTimeout(tick, 2600); }
+      return setTimeout(tick, 34 + Math.random()*40);
+    }
+    el.textContent = line.slice(0, --ci);
+    if(ci === 0){ deleting = false; li = (li+1)%lines.length; }
+    setTimeout(tick, 14);
+  }
+  tick();
+  // duplicate token track for seamless marquee
+  const track = document.getElementById('tokenTrack');
+  track.innerHTML += track.innerHTML;
+</script>
+
+</body>
+</html>

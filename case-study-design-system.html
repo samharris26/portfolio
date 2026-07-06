@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kato Design System — Sam Harris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="index.html"><b>~/</b>sam-harris</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a class="keep" href="contact.html">Contact</a>
+      <span class="status"><span class="dot"></span>open to new roles</span>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Kato <span>×</span> case study</p>
+    <h1>Unifying design and development through a <em>single system</em></h1>
+    <p class="hero-sub">Replacing fragmented UI libraries with a scalable, AI-enabled design system.</p>
+    <div class="meta-grid">
+      <div><b>ROLE</b>Product Designer<br>AI-assisted front-end</div>
+      <div><b>SERVICE</b>Design systems</div>
+      <div><b>STACK</b>Figma variables · shadcn/ui<br>Claude</div>
+      <div><b>USED BY</b>Design, engineering,<br>and the whole product team</div>
+    </div>
+    <div class="shot tall hero-shot filled"><img src="https://framerusercontent.com/images/DnTFkgQAmm0Xv2w1i4oUTfAI9c.png" alt="Kato design system"></div>
+  </div>
+</header>
+
+<section class="cs wrap">
+
+  <div class="cs-block">
+    <div class="cs-label">Overview</div>
+    <div class="cs-body">
+      <p>Kato's design and development workflows were split across multiple UI libraries, leading to inconsistency, duplication, and slower iteration.</p>
+      <p>The goal was to create a single, unified design system that aligned design and engineering, improved consistency, and enabled faster product development, with AI as a first-class part of how the team designs and builds.</p>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <div class="cs-label">The problem</div>
+    <div class="cs-body">
+      <p class="dim">Design and development were fragmented:</p>
+      <ul>
+        <li><b>Two UI libraries in use:</b> MUI and Ant Design</li>
+        <li><b>Inconsistent patterns and components</b> across the product</li>
+        <li><b>No single source of truth</b> for component states or foundations (colour, spacing, typography)</li>
+        <li><b>Designers and engineers</b> working from slightly different interpretations</li>
+        <li><b>Slow iteration</b> from duplicated effort and unclear implementation details</li>
+      </ul>
+      <p class="dim">The result: visual inconsistency, increased development overhead, and friction between design and engineering.</p>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <div class="cs-label">The approach</div>
+    <div class="cs-body">
+      <h3><span class="n">01</span>Consolidating to a single system</h3>
+      <p>Moved from multiple UI libraries to a single, consistent system based on shadcn/ui: a unified component set, duplication across MUI and Ant Design removed, and alignment between design and implementation ensured.</p>
+      <div class="shot-row">
+        <div class="shot mid filled"><img src="https://framerusercontent.com/images/RU1xDzjqfKVGUf5FpqJJvpbY.png" alt="Unified component set"></div>
+        <div class="shot mid filled"><img src="https://framerusercontent.com/images/R5j3Tzfsu1Qs5cFSehsUMlm0oQ.png" alt="System consolidation"></div>
+      </div>
+
+      <h3><span class="n">02</span>AI-integrated design workflows</h3>
+      <p>The system's biggest unlock: connecting it to Claude, so the whole product team can design with it, not just designers.</p>
+      <ul>
+        <li><b>Connected the design system to Claude:</b> components, variables, and usage rules as context for AI generation</li>
+        <li><b>Enabled every product team member</b>, PMs included, to prompt high-fidelity, on-brand prototypes built from real system components</li>
+        <li><b>Prototypes push into development environments</b> and are validated with real data; AI-generated code directly informs production-ready features</li>
+        <li><b>Removed manual design setup</b> as the bottleneck for exploring and testing ideas</li>
+      </ul>
+      <div class="callout">
+        <div class="c-label">Why it matters</div>
+        <p>This workflow is how I now operate as both product designer and front-end developer at Kato: the design system keeps AI output consistent, and AI keeps design and build moving at the same speed.</p>
+      </div>
+      <div class="shot-row">
+        <div class="shot mid filled"><img src="https://framerusercontent.com/images/ujicKWRi6U7J3kPpKDopRYqfPY.png" alt="Prompt to prototype"></div>
+        <div class="shot mid filled"><img src="https://framerusercontent.com/images/S5SKPK8Gnu8Rjr9wnaAHnsT7dE.png" alt="AI-generated UI"></div>
+      </div>
+
+      <h3><span class="n">03</span>Foundations &amp; token structure</h3>
+      <p>A structured foundation layer in Figma (colour system, typography scale, spacing and layout rules, border radius and component styling) built on variables to ensure consistency, enable easy updates and scaling, and maintain alignment with development.</p>
+
+      <h3><span class="n">04</span>Component library with full state coverage</h3>
+      <p>A comprehensive component library covering all core UI components with full state definitions (default, hover, active, disabled, error) and clear interaction patterns, supported by an interactive documentation site and visual references for how components behave in context. Designers move faster; engineers implement with confidence.</p>
+
+      <h3><span class="n">05</span>Internal documentation &amp; accessibility</h3>
+      <p>A working, interactive site showing all foundations and components in one place, with clear guidance on usage and behaviour: a shared reference point across teams. The goal: make the system easy to understand and actually used.</p>
+      <div class="shot-row">
+        <div class="shot mid filled"><img src="https://framerusercontent.com/images/oWSvVh4kEc9T6tClDiCIOgnGHg.png" alt="Component states"></div>
+        <div class="shot mid filled"><img src="https://framerusercontent.com/images/ZyyOOHeHmtvc8Gom4pHgyenUCr0.png" alt="Documentation site"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <div class="cs-label">Outcome</div>
+    <div class="cs-body">
+      <ul>
+        <li><b>Consolidated multiple UI systems</b> into a single, scalable design system</li>
+        <li><b>Improved consistency</b> across the product and reduced friction between design and engineering</li>
+        <li><b>Increased speed</b> of prototyping and iteration</li>
+        <li><b>Enabled non-designers</b> to generate system-aligned UI through AI</li>
+        <li><b>Established the foundation</b> for faster product development and experimentation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <div class="cs-label">Learnings</div>
+    <div class="cs-body">
+      <ul>
+        <li>Design systems only work if they're easy to use and accessible to the whole team</li>
+        <li>The biggest gains come from aligning design and engineering, not just organising components</li>
+        <li>AI can unlock system usage beyond designers, if the foundations are strong</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="next wrap">
+  <a href="case-study-noa.html">
+    <div class="n-label">Next project — 04</div>
+    <div class="n-title"><em>Noa</em> — your life, organised →</div>
+  </a>
+</div>
+
+<footer>
+  <div class="wrap foot-meta">
+    <span>© 2026 Sam Harris — designed &amp; built by me (and a bit of Claude)</span>
+    <span><a href="index.html">home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="contact.html">contact</a></span>
+  </div>
+</footer>
+
+<script src="lightbox.js"></script>
+</body>
+</html>
