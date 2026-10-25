@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hinterview Insights — Sam Harris</title>
+<title>Hinterview Insights | Sam Harris</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css?v=2026-10-25">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
+<nav aria-label="Main">
   <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html"><b>~/</b>sam-harris</a>
+    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
     <div class="nav-links">
       <a href="index.html#work">Work</a>
       <a href="index.html#about">About</a>
       <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot"></span>open to new roles</span>
+      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
     </div>
-    <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')"></button>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
   </div>
 </nav>
 
-<div class="mobile-nav">
+<div class="mobile-nav" id="mobile-nav">
     <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
     <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
     <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot"></span>open to new roles</span>
+    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
 </div>
 
+<main id="main">
 <header>
   <div class="wrap">
-    <p class="eyebrow">Hinterview <span>×</span> case study</p>
+    <p class="eyebrow">Hinterview <span aria-hidden="true">×</span> case study</p>
     <h1>Allowing thousands of recruiters to make <em>data-driven decisions</em></h1>
     <p class="hero-sub">A 0–1 insights dashboard consolidating key metrics into a single, user-friendly interface, for recruiters optimising their video outreach and managers setting team targets.</p>
     <div class="meta-grid">
@@ -48,14 +51,14 @@
 <section class="cs wrap">
 
   <div class="cs-block">
-    <div class="cs-label">Background</div>
+    <h2 class="cs-label">Background</h2>
     <div class="cs-body">
       <p>Hinterview Insights was developed to give recruiters a comprehensive view of their activities, enabling data-driven decisions and improving workflow efficiency around video outreach. The feature consolidates key metrics and insights into a single, user-friendly interface, empowering recruiters to optimise their performance while allowing managers to set targets for their teams.</p>
     </div>
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Challenges</div>
+    <h2 class="cs-label">Challenges</h2>
     <div class="cs-body">
       <ul>
         <li><b>Presenting complex data</b> in an accessible, meaningful way</li>
@@ -66,7 +69,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Business goals</div>
+    <h2 class="cs-label">Business goals</h2>
     <div class="cs-body">
       <ul>
         <li>Promote data-driven decision-making in the video outreach process</li>
@@ -76,7 +79,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Design</div>
+    <h2 class="cs-label">Design</h2>
     <div class="cs-body">
       <p>The final UI is a comprehensive, intuitive dashboard for accessing key metrics and insights. Data is presented clearly and meaningfully, letting recruiters make informed decisions quickly. Key actions are prominently displayed, and the user flow is optimised for ease of use.</p>
       <div class="shot mid filled"><img src="https://framerusercontent.com/images/f3oHMC7AmraTRapHb3pjmGk17U.png" alt="Metrics overview"></div>
@@ -92,7 +95,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Learnings</div>
+    <h2 class="cs-label">Learnings</h2>
     <div class="cs-body">
       <ul>
         <li>Understanding user needs and behaviours was crucial in creating a dashboard that's both efficient and engaging, even without formal user testing</li>
@@ -104,19 +107,21 @@
 
 <div class="next wrap">
   <a href="case-study-billing.html">
-    <div class="n-label">Back to the start — 01</div>
+    <div class="n-label">Back to the start · 01</div>
     <div class="n-title">Kato <em>Society Billing</em> →</div>
   </a>
 </div>
 
+</main>
+
 <footer>
   <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris — designed &amp; built by me (and a bit of Claude)</span>
-    <span><a href="index.html">home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="contact.html">contact</a></span>
+    <span>© 2026 Sam Harris · Designed and built by me</span>
+    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
   </div>
 </footer>
 
-<script src="lightbox.js"></script>
+<script src="lightbox.js?v=2026-10-25"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

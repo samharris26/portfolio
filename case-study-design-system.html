@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kato Design System — Sam Harris</title>
+<title>Kato Design System | Sam Harris</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css?v=2026-10-25">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
+<nav aria-label="Main">
   <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html"><b>~/</b>sam-harris</a>
+    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
     <div class="nav-links">
       <a href="index.html#work">Work</a>
       <a href="index.html#about">About</a>
       <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot"></span>open to new roles</span>
+      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
     </div>
-    <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')"></button>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
   </div>
 </nav>
 
-<div class="mobile-nav">
+<div class="mobile-nav" id="mobile-nav">
     <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
     <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
     <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot"></span>open to new roles</span>
+    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
 </div>
 
+<main id="main">
 <header>
   <div class="wrap">
-    <p class="eyebrow">Kato <span>×</span> case study</p>
+    <p class="eyebrow">Kato <span aria-hidden="true">×</span> case study</p>
     <h1>Unifying design and development through a <em>single system</em></h1>
     <p class="hero-sub">Replacing fragmented UI libraries with a scalable, AI-enabled design system.</p>
     <div class="meta-grid">
@@ -48,7 +51,7 @@
 <section class="cs wrap">
 
   <div class="cs-block">
-    <div class="cs-label">Overview</div>
+    <h2 class="cs-label">Overview</h2>
     <div class="cs-body">
       <p>Kato's design and development workflows were split across multiple UI libraries, leading to inconsistency, duplication, and slower iteration.</p>
       <p>The goal was to create a single, unified design system that aligned design and engineering, improved consistency, and enabled faster product development, with AI as a first-class part of how the team designs and builds.</p>
@@ -56,7 +59,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">The problem</div>
+    <h2 class="cs-label">The problem</h2>
     <div class="cs-body">
       <p class="dim">Design and development were fragmented:</p>
       <ul>
@@ -71,7 +74,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">The approach</div>
+    <h2 class="cs-label">The approach</h2>
     <div class="cs-body">
       <h3><span class="n">01</span>Consolidating to a single system</h3>
       <p>Moved from multiple UI libraries to a single, consistent system based on shadcn/ui: a unified component set, duplication across MUI and Ant Design removed, and alignment between design and implementation ensured.</p>
@@ -113,7 +116,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Outcome</div>
+    <h2 class="cs-label">Outcome</h2>
     <div class="cs-body">
       <ul>
         <li><b>Consolidated multiple UI systems</b> into a single, scalable design system</li>
@@ -126,7 +129,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Learnings</div>
+    <h2 class="cs-label">Learnings</h2>
     <div class="cs-body">
       <ul>
         <li>Design systems only work if they're easy to use and accessible to the whole team</li>
@@ -139,19 +142,21 @@
 
 <div class="next wrap">
   <a href="case-study-noa.html">
-    <div class="n-label">Next project — 04</div>
-    <div class="n-title"><em>Noa</em> — your life, organised →</div>
+    <div class="n-label">Next project · 04</div>
+    <div class="n-title"><em>Noa</em>: your life, organised →</div>
   </a>
 </div>
 
+</main>
+
 <footer>
   <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris — designed &amp; built by me (and a bit of Claude)</span>
-    <span><a href="index.html">home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="contact.html">contact</a></span>
+    <span>© 2026 Sam Harris · Designed and built by me</span>
+    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
   </div>
 </footer>
 
-<script src="lightbox.js"></script>
+<script src="lightbox.js?v=2026-10-25"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

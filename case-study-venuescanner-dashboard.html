@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VenueScanner Dashboard — Sam Harris</title>
+<title>VenueScanner Dashboard | Sam Harris</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css?v=2026-10-25">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
+<nav aria-label="Main">
   <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html"><b>~/</b>sam-harris</a>
+    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
     <div class="nav-links">
       <a href="index.html#work">Work</a>
       <a href="index.html#about">About</a>
       <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot"></span>open to new roles</span>
+      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
     </div>
-    <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')"></button>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
   </div>
 </nav>
 
-<div class="mobile-nav">
+<div class="mobile-nav" id="mobile-nav">
     <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
     <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
     <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot"></span>open to new roles</span>
+    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
 </div>
 
+<main id="main">
 <header>
   <div class="wrap">
-    <p class="eyebrow">VenueScanner <span>×</span> 2024 <span>×</span> case study</p>
+    <p class="eyebrow">VenueScanner <span aria-hidden="true">×</span> 2024 <span aria-hidden="true">×</span> case study</p>
     <h1>Improved user control with the introduction of a <em>dashboard</em></h1>
     <p class="hero-sub">A comprehensive, user-friendly platform for hosts to oversee bookings, communicate with clients, and manage enquiries efficiently.</p>
     <div class="meta-grid">
@@ -48,14 +51,14 @@
 <section class="cs wrap">
 
   <div class="cs-block">
-    <div class="cs-label">Background</div>
+    <h2 class="cs-label">Background</h2>
     <div class="cs-body">
       <p>The VenueScanner Dashboard project aimed to revolutionise the venue management experience for hosts by providing a comprehensive, user-friendly platform. The goal was to streamline the management process, making it easier for hosts to oversee their bookings, communicate with clients, and manage their enquiries efficiently.</p>
     </div>
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Challenges</div>
+    <h2 class="cs-label">Challenges</h2>
     <div class="cs-body">
       <ul>
         <li><b>Creating an intuitive interface</b> for managing bookings and venue details</li>
@@ -70,7 +73,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Business goals</div>
+    <h2 class="cs-label">Business goals</h2>
     <div class="cs-body">
       <ul>
         <li>Increase the efficiency of venue management processes</li>
@@ -82,7 +85,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">The approach</div>
+    <h2 class="cs-label">The approach</h2>
     <div class="cs-body">
       <h3><span class="n">01</span>Usability-first, from the ground up</h3>
       <p>As a brand-new feature replacing the previous messaging platform, the primary focus was designing an intuitive, efficient experience from scratch. CTAs were strategically placed to avoid confusion, and the interface was optimised to reduce the number of clicks required for task completion. Consistent visual design and a clear tone of voice aligned with VenueScanner's branding.</p>
@@ -108,7 +111,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Next steps</div>
+    <h2 class="cs-label">Next steps</h2>
     <div class="cs-body">
       <ul>
         <li>Monitor user interaction with the new dashboard</li>
@@ -121,19 +124,21 @@
 
 <div class="next wrap">
   <a href="case-study-venuescanner-booking.html">
-    <div class="n-label">Next project — 06</div>
+    <div class="n-label">Next project · 06</div>
     <div class="n-title">VenueScanner <em>Booking</em> →</div>
   </a>
 </div>
 
+</main>
+
 <footer>
   <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris — designed &amp; built by me (and a bit of Claude)</span>
-    <span><a href="index.html">home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="contact.html">contact</a></span>
+    <span>© 2026 Sam Harris · Designed and built by me</span>
+    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
   </div>
 </footer>
 
-<script src="lightbox.js"></script>
+<script src="lightbox.js?v=2026-10-25"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

@@ -1,54 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noa — Sam Harris</title>
+<title>Noa | Sam Harris</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css?v=2026-10-25">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
+<nav aria-label="Main">
   <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html"><b>~/</b>sam-harris</a>
+    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
     <div class="nav-links">
       <a href="index.html#work">Work</a>
       <a href="index.html#about">About</a>
       <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot"></span>open to new roles</span>
+      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
     </div>
-    <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')"></button>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
   </div>
 </nav>
 
-<div class="mobile-nav">
+<div class="mobile-nav" id="mobile-nav">
     <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
     <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
     <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot"></span>open to new roles</span>
+    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
 </div>
 
+<main id="main">
 <header>
   <div class="wrap">
-    <p class="eyebrow">Personal project <span>×</span> case study</p>
+    <p class="eyebrow">Personal project <span aria-hidden="true">×</span> case study</p>
     <h1>A shared <em>operating system</em> for families</h1>
-    <p class="hero-sub">A consumer app that simplifies how individuals, couples, and families manage daily life (calendars, tasks, lists, and reminders) by letting people interact naturally instead of forcing them into rigid systems.</p>
+    <p class="hero-sub">A consumer app that simplifies how individuals, couples, and families manage daily life (calendars, tasks, lists, and reminders) by letting people interact naturally instead of forcing them into rigid systems. Now live on the App Store with over 200 users.</p>
     <div class="meta-grid">
       <div><b>ROLE</b>Designer &amp; builder</div>
       <div><b>SERVICE</b>Product design<br>AI-assisted build</div>
       <div><b>STACK</b>Figma · Claude · Cursor</div>
-      <div><b>STATUS</b>Live in the App Store<br>200 real users</div>
+      <div><b>STATUS</b>Live on the App Store<br>200+ users</div>
     </div>
-    <div class="shot tall hero-shot filled"><img src="https://framerusercontent.com/images/CgBW8J9Y9woZDAnShRO5Wvv8C0.png" alt="Noa app"></div>
+    <div class="shot panorama hero-shot filled"><img src="images/noa/hero.jpg" alt="Noa home, calendar, tasks and lists"></div>
   </div>
 </header>
 
 <section class="cs wrap">
 
   <div class="cs-block">
-    <div class="cs-label">The problem</div>
+    <h2 class="cs-label">The problem</h2>
     <div class="cs-body">
       <p class="dim">Managing everyday life is fragmented and mentally taxing:</p>
       <ul>
@@ -62,7 +65,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">The approach</div>
+    <h2 class="cs-label">The approach</h2>
     <div class="cs-body">
       <div class="callout">
         <div class="c-label">Core principle</div>
@@ -70,40 +73,32 @@
       </div>
 
       <h3><span class="n">01</span>Natural language as the primary interface</h3>
-      <p>Users input tasks, events, or lists in plain language: "Add dentist next Tuesday at 3pm for family", "Pick up milk and bananas", "Remind me Phoebe has non-uniform day Friday". The system parses intent, extracts key details (date, time, person, context), and assigns or categorises automatically. No manual setup, no rigid input flows, no cognitive friction.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/B4gtIYQU9VUP8XAjOv6R7pTflBI.png" alt="Natural language capture"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/CXCkp2Jh6qC0qALf2QT8VQo.png" alt="Smart categorisation"></div>
-      </div>
+      <p>Users input tasks, events, or lists in plain language: "Add dentist next Tuesday at 3pm for family", "Pick up milk and bananas", "Remind me Phoebe has non-uniform day Friday". The system parses intent, extracts key details (date, time, person, context), and assigns or categorises automatically. No manual setup, no rigid input flows, no cognitive friction. The same works outside the app: message Noa on WhatsApp and it lands on the right list, or use Ask Noa to change things in plain language ("move my late tasks").</p>
+      <div class="shot wide filled"><img src="images/noa/natural-language.jpg" alt="WhatsApp capture and natural language task entry"></div>
 
       <h3><span class="n">02</span>Unifying tasks, calendar, and lists</h3>
       <p>Instead of separate tools, Noa treats everything as part of one shared system: tasks can become events, notes can become actionable items, lists can be shared and assigned. The design focus: avoid duplication, maintain flexibility without complexity, keep the system understandable at a glance.</p>
 
       <h3><span class="n">03</span>Shared context for families &amp; couples</h3>
       <p>Designed for multiple users from the start: assign tasks to specific people, shared visibility across the household, clear ownership of responsibilities. The key goal: reduce reliance on one person holding everything.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/8oXArJusq3wTXmscwy9EN4pqXd0.png" alt="Shared household view"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/YPlo8qquwXdT9mAJqyheKMthak.png" alt="Task ownership"></div>
-      </div>
+      <div class="shot wide filled"><img src="images/noa/shared-household.jpg" alt="Shared family calendar and task ownership"></div>
 
       <h3><span class="n">04</span>AI in the product and in the build</h3>
       <p>AI isn't just a feature; it's how the product was made. In-product: natural language parsing, smart categorisation and structuring. In development: rapid prototyping with Claude and Cursor, iterating on flows quickly without over-specifying in Figma, and exploring agent-led workflows for faster UI iteration.</p>
 
       <h3><span class="n">05</span>Designing for real behaviour</h3>
-      <p>Quick capture over structured input. Shared accountability over personal organisation. Low friction over feature depth. One-tap capture flows, minimal required input, and defaults that just work.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/F6CM7pC6cq5DHyVyzB0dycHwpm8.png" alt="Quick capture"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/ja0KjnVA823Wv0EOcBfn62N6aM.png" alt="Defaults that work"></div>
-      </div>
+      <p>Quick capture over structured input. Shared accountability over personal organisation. Low friction over feature depth. One-tap capture flows, minimal required input, and defaults that just work. Onboarding takes about 90 seconds and every step can be skipped.</p>
+      <div class="shot wide filled"><img src="images/noa/quick-setup.jpg" alt="Onboarding in about 90 seconds"></div>
     </div>
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Outcome</div>
+    <h2 class="cs-label">Outcome</h2>
     <div class="cs-body">
       <ul>
         <li><b>Designed, built, and shipped an end-to-end consumer product</b> from concept to the App Store</li>
-        <li><b>Live with 200 real users</b> actively using the app and providing feedback</li>
+        <li><b>Live on the App Store with over 200 users</b> actively using the app and providing feedback</li>
+        <li><b>Redesigned end to end</b> since launch, across every screen</li>
         <li><b>Validated demand</b> around shared coordination, natural language input, and reducing mental load in households</li>
         <li><b>Established a flexible foundation</b> for personal use, couples, and family plans</li>
       </ul>
@@ -111,7 +106,7 @@
   </div>
 
   <div class="cs-block">
-    <div class="cs-label">Learnings</div>
+    <h2 class="cs-label">Learnings</h2>
     <div class="cs-body">
       <ul>
         <li>The biggest problem isn't organisation, it's coordination</li>
@@ -126,19 +121,21 @@
 
 <div class="next wrap">
   <a href="case-study-venuescanner-dashboard.html">
-    <div class="n-label">Next project — 05</div>
+    <div class="n-label">Next project · 05</div>
     <div class="n-title">VenueScanner <em>Dashboard</em> →</div>
   </a>
 </div>
 
+</main>
+
 <footer>
   <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris — designed &amp; built by me (and a bit of Claude)</span>
-    <span><a href="index.html">home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="contact.html">contact</a></span>
+    <span>© 2026 Sam Harris · Designed and built by me</span>
+    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
   </div>
 </footer>
 
-<script src="lightbox.js"></script>
+<script src="lightbox.js?v=2026-10-25"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
