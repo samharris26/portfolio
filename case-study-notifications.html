@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kato Notifications | Sam Harris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css?v=2026-10-25b">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav aria-label="Main">
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a class="keep" href="contact.html">Contact</a>
+      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+    </div>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
+    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
+    <a href="contact.html">Contact</a>
+    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+</div>
+
+<main id="main">
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Kato <span aria-hidden="true">×</span> 2026 <span aria-hidden="true">×</span> case study</p>
+    <h1>One place for everything that <em>needs your attention</em></h1>
+    <p class="hero-sub">In-app notifications for Kato's agency app, taken from first exploration to a shipped notification centre. I product managed, designed and built it.</p>
+    <div class="meta-grid">
+      <div><b>ROLE</b>Product manager<br>Product designer<br>Front-end build</div>
+      <div><b>SERVICE</b>Product management<br>Product design</div>
+      <div><b>STACK</b>Figma · React · Laravel</div>
+      <div><b>STATUS</b>Live since<br>October 2026</div>
+    </div>
+    <div class="shot photo hero-shot filled"><img src="images/notifications/app-all.webp" alt="The notification panel open over the agency dashboard, showing an invite, a message and a listing alert"></div>
+  </div>
+</header>
+
+<section class="cs wrap">
+
+  <div class="cs-block">
+    <h2 class="cs-label">Background</h2>
+    <div class="cs-body">
+      <p>Agents using Kato need to know when something changes: a listing is going stale, someone sends a schedule invite, a message arrives, or a colleague mentions them in a comment. Before this work, the app had no single place to see those moments.</p>
+      <p>This was the first project where I owned all three sides: deciding what to build and in what order, designing it, and shipping the front-end.</p>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <h2 class="cs-label">The problem</h2>
+    <div class="cs-body">
+      <p class="dim">Important updates were easy to miss:</p>
+      <ul>
+        <li><b>No notification centre</b> in the agency app, so updates relied on emails and on users checking each page</li>
+        <li><b>Listings going stale</b> needed action, but nothing in the product prompted agents to act</li>
+        <li><b>Invites, messages and @mentions</b> had no in-app signal at all</li>
+        <li><b>Two front-ends</b>, a newer React app and older AngularJS pages, meant any solution had to work across both</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <h2 class="cs-label">Product</h2>
+    <div class="cs-body">
+      <h3><span class="n">01</span>Scoping an MVP that could ship</h3>
+      <p>I started from two prototypes, one with the interface and one with the real API, and wrote a design doc that merged them into a single MVP. It set a tight scope: a bell, a panel of the user's notifications, unread states, mark as read, and a click-through to the right page. Real-time push, preferences and a full notifications page were deliberately left for later.</p>
+      <div class="callout">
+        <div class="c-label">Scoping principle</div>
+        <p>Ship one complete, working notification end to end, then add notification types one at a time.</p>
+      </div>
+
+      <h3><span class="n">02</span>Rolling it out safely</h3>
+      <p>Each notification type sits behind its own feature flag, so new types could go live one at a time, to chosen organisations first, without risking the rest.</p>
+      <ul>
+        <li>Listing alerts: stale, 48 hour and unpublished listings, grouped per stage</li>
+        <li>Schedule invites, with a backfill so existing invites appeared on launch</li>
+        <li>Messages, skipped while you're already viewing the thread</li>
+        <li>@mentions in comments across interest schedules, requirements, shortlists and viewings</li>
+      </ul>
+      <div class="shot-row">
+        <div class="shot photo filled"><img src="images/notifications/row-invite.webp" alt="A schedule invite notification with a Review invite button"></div>
+        <div class="shot photo filled"><img src="images/notifications/row-disposal.webp" alt="A listing alert asking the agent to review a disposal"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <h2 class="cs-label">Design</h2>
+    <div class="cs-body">
+      <h3><span class="n">03</span>Where the bell lives</h3>
+      <p>The app had no top bar, so placement was a real decision. I built both candidate positions behind a toggle, top right of the page and in the left navigation, so we could compare them in the product rather than in static mocks. The bell settled in the left navigation.</p>
+      <div class="shot photo filled"><img src="images/notifications/app-history.webp" alt="The notifications bell in the left navigation with an unread count, and the panel open on the History tab"></div>
+
+      <h3><span class="n">04</span>A panel built around actions</h3>
+      <p>Some notifications just inform you, others need you to do something. The panel uses a two-state model that separates read from actioned, so a notification only clears when it's genuinely dealt with.</p>
+      <ul>
+        <li>Tabs for invites, messages and history, with unread dots rather than counts</li>
+        <li>Dismiss only on informational rows; completed rows tinted with the success colour</li>
+        <li>Titles clamped to two lines with a tooltip, and copy tightened with a UI copy review</li>
+        <li>Each notification opens the exact record, often straight into its drawer</li>
+      </ul>
+      <div class="shot photo filled"><img src="images/notifications/panels-all-invites.webp" alt="The All and Invites tabs, showing unread and read invites"></div>
+      <div class="shot photo filled"><img src="images/notifications/panels-messages-history.webp" alt="The Messages tab with unread and read messages, and the History tab with actioned, dismissed and expired states"></div>
+
+      <h3><span class="n">05</span>Noticeable, even in another tab</h3>
+      <p>Agents often keep Kato open in the background. Unread notifications now show in the browser tab: a red dot on the favicon and the unread count in the page title.</p>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <h2 class="cs-label">Build</h2>
+    <div class="cs-body">
+      <h3><span class="n">06</span>Shipping the front-end</h3>
+      <p>I built the notification centre in React on the Kato design system, wired to the existing Laravel notifications API, with an adapter that turns each raw notification into a consistent row with the right link.</p>
+      <ul>
+        <li>One shared bell component, also embedded in the older AngularJS navigation so every page has it</li>
+        <li>Component tests for the panel states</li>
+        <li>Built with AI-assisted development, reviewed and shipped through the normal release process</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cs wrap">
+  <div class="cs-block">
+    <h2 class="cs-label">Outcome</h2>
+    <div class="cs-body">
+      <p>A notification centre that's live across the agency app, built so new notification types can be added and rolled out one at a time.</p>
+      <ul>
+        <li><b>Product managed, designed and built</b> from first exploration to release</li>
+        <li><b>Listing alerts, invites, messages and @mentions</b> in one place</li>
+        <li><b>Safe, gradual rollout</b> with a feature flag per notification type</li>
+        <li><b>Launched in October 2026</b>, with usage results to follow</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <h2 class="cs-label">Learnings</h2>
+    <div class="cs-body">
+      <ul>
+        <li>A tight MVP that works end to end beats a broad one that doesn't ship</li>
+        <li>Testing placement in the real product settled the debate faster than mockups</li>
+        <li>Separating read from actioned keeps the panel honest about what still needs doing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="next wrap">
+  <a href="case-study-billing.html">
+    <div class="n-label">Next project · 02</div>
+    <div class="n-title">Kato <em>Society Billing</em> →</div>
+  </a>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap foot-meta">
+    <span>© 2026 Sam Harris · Designed and built by me</span>
+    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
+  </div>
+</footer>
+
+<script src="lightbox.js?v=2026-10-25"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

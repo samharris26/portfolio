@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sam Harris | Product designer</title>
-<meta name="description" content="Sam Harris, product designer. Thirteen years turning complex problems into clear, usable products, and shipping the front-end too.">
+<meta name="description" content="Sam Harris, product designer. Thirteen years making complex products simpler: designing the experience, building the front-end and helping shape what gets built.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
@@ -115,6 +115,7 @@
   .work{border-top:1px solid var(--line)}
   .row{display:grid;grid-template-columns:136px 260px 1fr auto;gap:32px;align-items:center;padding:22px 16px;margin:0 -16px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);border-radius:10px;transition:background .18s}
   .row .thumb{display:block;width:136px;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:var(--thumb)}
+  .row .thumb.placeholder{background:var(--thumb) radial-gradient(circle at 50% 50%, color-mix(in srgb,var(--accent) 35%,transparent) 0 6px, transparent 7px)}
   .row .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
   .row .name{font-size:22px;font-weight:400;letter-spacing:-.015em}
   .row .name em{font-style:normal;font-weight:500}
@@ -184,7 +185,7 @@
   <div class="wrap">
     <p class="kicker">Product Designer at Kato</p>
     <h1>I design products.<br>Then I <em>build</em> them.</h1>
-    <p class="lede">Thirteen years turning complex problems into clear, usable products. Design is my core craft, and I ship the production front-end too: <b>one person, both halves, no handoff.</b> More recently I've picked up product management at Kato, a newer skill I'm really enjoying.</p>
+    <p class="lede">Thirteen years making complex products simpler. I design the experience, build the front-end and help shape what gets built. At Kato, I've expanded into product management, taking a more active role in defining problems, prioritising work and getting the right things shipped.</p>
   </div>
 </header>
 
@@ -202,19 +203,19 @@
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
         <h3>Design <span class="badge">Core</span></h3><p class="q">How should it work?</p>
         <ul><li>User-centred design</li><li>Prototyping</li><li>Design systems</li></ul>
-        <p class="result"><span>Outcome</span><b>Clear, usable interfaces</b></p>
+        <p class="result"><span>Strength</span><b>Clear, usable interfaces</b></p>
       </div>
       <div class="lane">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 7L3.5 12l5 5"/><path d="M15.5 7l5 5-5 5"/><path d="M13.5 4.5l-3 15"/></svg></span>
         <h3>Build</h3><p class="q">How does it ship?</p>
-        <ul><li>Production front-end</li><li>AI-assisted development</li><li>Built on the design system</li></ul>
-        <p class="result"><span>Outcome</span><b>What ships is what was designed</b></p>
+        <ul><li>Production front-end</li><li>AI-assisted front-end development</li><li>Built on the design system</li></ul>
+        <p class="result"><span>Strength</span><b>From concept to production</b></p>
       </div>
       <div class="lane">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></span>
-        <h3>Product <span class="badge new">Newer</span></h3><p class="q">What should we build, and why?</p>
-        <ul><li>Framing the problem</li><li>Writing the spec</li><li>Setting priorities</li></ul>
-        <p class="result"><span>Outcome</span><b>The right problem gets solved first</b></p>
+        <h3>Product <span class="badge">Growing</span></h3><p class="q">What should we build, and why?</p>
+        <ul><li>Framing the problem</li><li>Product requirements &amp; specifications</li><li>Setting priorities</li></ul>
+        <p class="result"><span>Strength</span><b>Problem definition &amp; prioritisation</b></p>
       </div>
     </div>
     <p class="range-note">Doing all three means nothing gets lost between the idea, the design and the code.</p>
@@ -223,6 +224,12 @@
   <section class="block" id="work" aria-labelledby="h-work">
     <div class="head"><h2 id="h-work">Selected work</h2><p>2015 to present</p></div>
     <div class="work">
+      <a class="row" href="case-study-notifications.html">
+        <span class="thumb"><img src="images/notifications/app-all.webp" alt="" loading="lazy"></span>
+        <span class="name">Kato <em>Notifications</em></span>
+        <span class="outcome">In-app notifications, from first exploration to a shipped notification centre</span>
+        <span class="tags"><span class="tag">product</span><span class="tag">design</span><span class="tag">build</span></span>
+      </a>
       <a class="row" href="case-study-billing.html">
         <span class="thumb"><img src="https://framerusercontent.com/images/I2gnW0qnk7Hu20R68qETXLvZk.png" alt="" loading="lazy"></span>
         <span class="name">Kato <em>Society Billing</em></span>
@@ -274,7 +281,7 @@
         <p>I started my career in graphic design at Shillington, building a strong foundation in visual communication and core design principles. I later transitioned into product design through Memorisely, where I developed my approach to user-centred design, from problem definition through to prototyping and delivery.</p>
         <p>Over the past <em>thirteen years</em>, I've designed and shipped products across B2B and consumer spaces, with a recent focus on SaaS platforms. I work closely with engineering and product teams to take ideas from early concept through to production, balancing speed, clarity, and attention to detail.</p>
         <p>Today the role spans <em>design and build</em>. At Kato, I design and ship production front-end using AI-assisted development (Claude, Cursor), with our design system as the source of truth: everything from small tweaks and components through to full features. I've also rolled that capability out to the wider team, building Claude workflows that let anyone in product prompt high-fidelity, on-brand prototypes.</p>
-        <p>More recently I've taken on <em>product management</em> alongside my design role, a hybrid we call Product Builder at Kato. Design is still the heart of what I do; PM is a newer skill I'm learning and really enjoying: shaping the problem, writing the spec and setting priorities before I design and build.</p>
+        <p>More recently I've taken on <em>product management</em> alongside my design role, a hybrid we call Product Builder at Kato. Design is still the heart of what I do; PM is a growing skill I'm really enjoying: shaping the problem, writing the spec and setting priorities before I design and build.</p>
       </div>
     </div>
   </section>

@@ -65,6 +65,9 @@ h1 em{font-style:normal;font-weight:400;color:var(--accent)}
 .shot.mid{height:380px}
 .shot.wide{aspect-ratio:16/9;margin:32px 0 8px}
 .shot.panorama{aspect-ratio:40/19}
+.shot.photo{aspect-ratio:4/3;margin:32px 0 8px}
+.shot-row .shot.photo,.hero-shot.photo{margin-left:0;margin-right:0}
+.hero-shot.photo{margin-bottom:0}
 .shot.filled::after{display:none}
 .shot.filled{cursor:zoom-in}
 .shot.filled img:focus-visible{outline-offset:-4px}
