@@ -63,7 +63,7 @@
           <div class="label"><span>Connect</span><span class="go" aria-hidden="true">↗</span></div>
           <div class="lead"><h2 class="title">LinkedIn</h2><p class="caption">sam-harris</p></div>
         </a>
-        <a class="card billing" href="sam-harris-cv.pdf" target="_blank" rel="noopener">
+        <a class="card billing" href="sam-harris-cv.pdf" data-umami-event="CV download" target="_blank" rel="noopener">
           <div class="label"><span>One page</span><span class="go" aria-hidden="true">↓</span></div>
           <div class="lead"><h2 class="title">CV</h2><p class="caption">Download the PDF</p></div>
         </a>
@@ -85,7 +85,7 @@
       </div>
     </section>
     <footer class="foot" style="margin-top:0">
-      <span>Want the full story? <a href="sam-harris-cv.pdf" target="_blank" rel="noopener">Download my CV</a></span>
+      <span>Want the full story? <a href="sam-harris-cv.pdf" data-umami-event="CV download" target="_blank" rel="noopener">Download my CV</a></span>
       <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
     </footer>
   </main>
@@ -108,10 +108,12 @@
     try{
       const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
       if(!res.ok) throw new Error();
+      window.umami?.track('Contact form sent');
       form.outerHTML='<div class="sent"><h3 class="title">Message sent</h3><p class="caption">Thanks, I\'ll get back to you soon.</p></div>';
     }catch(_){ btn.disabled=false; btn.textContent='Send message'; err.hidden=false; }
   });
 </script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="0891afe6-2e23-45d9-9063-3f690d88c13b" data-domains="samharris.xyz"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
