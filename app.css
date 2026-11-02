@@ -142,8 +142,8 @@ h1 mark{background:linear-gradient(transparent 62%,var(--lime) 62% 92%,transpare
 .stage.shipped::before,.live b.shipped::before{background:var(--success)}
 .stage.internal,.live b.internal{color:#5B4BA6}
 .stage.internal::before,.live b.internal::before{background:#8B78E6}
-.stage.store,.live b.store{color:#A4501C}
-.stage.store::before,.live b.store::before{background:#F08A4B}
+.stage.store,.live b.store{color:var(--accent-text)}
+.stage.store::before,.live b.store::before{background:var(--accent)}
 .long{font-size:var(--fs-intro);line-height:1.6;text-wrap:pretty}
 .long.soft{color:#36363A}
 .long strong{font-weight:600;color:var(--ink)}
