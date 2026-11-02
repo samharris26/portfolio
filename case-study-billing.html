@@ -3,169 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kato Society Billing | Sam Harris</title>
+<title>Society Billing | Sam Harris</title>
+<meta name="description" content="Moving ~700 organisations from a manual, CS-led invoicing model to a fully self-serve billing experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css?v=2026-10-25b">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav aria-label="Main">
-  <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
-    <div class="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+<div class="app">
+  <aside class="side" aria-label="Main">
+    <div class="side-top">
+      <a class="logo" href="index.html">Sam Harris<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="on" href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
-  </div>
-</nav>
+    <span class="status"><i aria-hidden="true"></i>Open to new roles</span>
+  </aside>
 
-<div class="mobile-nav" id="mobile-nav">
-    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
-    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
-    <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+  <main class="main cs">
+    <div class="topbar"><a class="logo" href="index.html">Sam Harris<span>.</span></a><span class="status"><i aria-hidden="true"></i>Open to roles</span></div>
+
+    <div class="cs-top">
+      <div class="crumb"><a href="work.html">Work</a><i> / </i>Society Billing</div>
+      <nav class="pager" aria-label="Other projects">
+        <a href="case-study-notifications.html">← Notifications</a>
+        <a class="fwd" href="case-study-atlas.html">Atlas →</a>
+      </nav>
+    </div>
+
+    <header class="cs-hero">
+      <div class="cs-hero-copy">
+        <div class="eyebrow" style="color:var(--ink)">Kato · Society Billing · 2026</div>
+        <h1>From chasing invoices to 98% paid on time</h1>
+        <p class="intro" style="color:var(--ink)">Moving ~700 organisations from a manual, CS-led invoicing model to a fully self-serve billing experience.</p>
+        <p class="live"><b class="shipped">Shipped 2026</b><span class="sep" aria-hidden="true">·</span><span>Product design</span></p>
+      </div>
+      <div class="shot"><img src="img/billing.png" alt="Society billing user management table"></div>
+    </header>
+
+    <section class="stats" aria-label="Results">
+      <div class="stat"><span class="metric">98%</span><span class="caption">of ~700 organisations</span></div>
+      <div class="stat"><span class="metric">90%</span><span class="caption">automatically on the renewal date</span></div>
+      <div class="stat"><span class="metric">7</span><span class="caption">of ~700, down from countless hours</span></div>
+      <div class="stat"><span class="metric">~£1m</span><span class="caption">in transactions</span></div>
+    </section>
+
+    <div class="cs-body">
+      <article class="article">
+        <section id="background" class="measure">
+          <span class="section-label">Background</span>
+          <p class="long">Kato's society billing process was heavily manual. It put significant operational load on the Customer Success team and created friction for organisations managing their members.</p>
+          <p class="long" style="color:var(--text-2)">The goal was to move from a CS-led invoicing model to a fully self-serve billing experience, so organisations could manage seats, payments and renewals directly in the product.</p>
+        </section>
+
+        <section id="problem">
+          <span class="section-label">The problem</span>
+          <h2 class="title">Billing for societies was fragmented and manual</h2>
+          <div class="problems">
+            <div class="problem"><span>01</span><p><b>Organisations relied on the CS team</b> to renew memberships, adjust seat counts and process invoices manually.</p></div>
+            <div class="problem"><span>02</span><p><b>No in-product way</b> to add or manage members, buy seats, or handle renewals independently.</p></div>
+            <div class="problem"><span>03</span><p><b>Renewals created a high operational burden:</b> manual outreach across ~1,500 organisations.</p></div>
+            <div class="problem"><span>04</span><p><b>Users joined societies externally</b> via society websites, creating a disconnected experience.</p></div>
+          </div>
+          <p class="result"><span>THE RESULT</span>High internal overhead, slow turnaround for customers, and a model that couldn't scale.</p>
+        </section>
+
+        <section id="approach-1">
+          <div class="measure">
+            <span class="section-label">01 · Approach</span>
+            <h2 class="title">Self-serve billing and seat management</h2>
+            <p class="long soft">Organisations can pay for memberships by card, add and manage members, buy extra seats on demand and handle renewals without CS involvement. The key challenge was making complex billing states feel simple: pricing and seat logic stay clear at every step, which reduces the risk of user error.</p>
+          </div>
+          <div class="shot"><img src="https://framerusercontent.com/images/C1lvrRDvCXO0pkO71ZLLm3jOoQ.png" alt="Self-serve billing and seat management" loading="lazy"></div>
+          <ul class="checks"><li>Pricing and seat logic visible at every step</li><li>Lower risk of error during payment and renewal</li></ul>
+        </section>
+
+        <section id="approach-2">
+          <div class="measure">
+            <span class="section-label">02 · Approach</span>
+            <h2 class="title">Renewal flow redesign</h2>
+            <p class="long soft">Previously, CS contacted organisations by hand, seat counts were confirmed over email, and invoices were created manually. The new in-product flow shows current seat usage and the upcoming renewal, so organisations can adjust and confirm in a few steps.</p>
+          </div>
+          <div class="shot"><img src="https://framerusercontent.com/images/UFdNfhJtGJS3RWKEG8Nuz1C6QM.png" alt="Renewal flow" loading="lazy"></div>
+          <ul class="checks"><li>Removed manual back-and-forth</li><li>Removed external invoicing workflows entirely</li></ul>
+        </section>
+
+        <section id="approach-3">
+          <div class="measure">
+            <span class="section-label">03 · Approach</span>
+            <h2 class="title">Join requests: bringing users in-product</h2>
+            <p class="long soft">Users and organisations can now discover societies within the platform and request to join in-product. This was previously handled externally via society websites.</p>
+          </div>
+          <div class="shot"><img src="https://framerusercontent.com/images/nqNaXqwuXXsSIU7iiprRefMZqc.png" alt="Join request flow" loading="lazy"></div>
+          <ul class="checks"><li>Reduced friction in user acquisition</li><li>Brought a key journey into Kato</li></ul>
+        </section>
+
+        <section id="outcome" class="outcome">
+          <span class="section-label">Outcome</span>
+          <h2 class="title">A manual, CS-led process became a scalable self-serve system</h2>
+          <ul class="outs">
+            <li>98% of ~700 organisations paid on time, with 90% paying by card automatically</li>
+            <li>Just 7 organisations needed active chasing, down from countless hours</li>
+            <li>Reduced operational load across ~1,500 organisations</li>
+            <li>Enabled ~£1m in transactions through the platform</li>
+          </ul>
+        </section>
+
+        <section id="learned">
+          <span class="section-label">What I learned</span>
+          <ol class="learn">
+            <li><span>01</span>Complex systems don't need complex interfaces. Clarity in states and actions is everything.</li>
+            <li><span>02</span>Self-serve only works when users feel confident they won't make mistakes.</li>
+            <li><span>03</span>Removing internal dependencies is often the highest-leverage product work.</li>
+            <li><span>04</span>Bringing fragmented journeys into the product unlocks both growth and usability.</li>
+          </ol>
+        </section>
+
+        <a class="next" href="case-study-atlas.html">
+          <div class="lead">
+            <div class="label"><span>Next project · Atlas</span></div>
+            <div class="metric">100+</div>
+            <p class="caption">companies trust Atlas, a product I designed from scratch</p>
+          </div>
+          <span class="go-lg" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <aside class="rail">
+        <nav class="rail-box toc" aria-label="On this page">
+          <span class="section-label">On this page</span>
+          <a href="#background">Background</a>
+          <a href="#problem">The problem</a>
+          <a href="#approach-1">01 · Self-serve billing</a>
+          <a href="#approach-2">02 · Renewal flow</a>
+          <a href="#approach-3">03 · Join requests</a>
+          <a href="#outcome">Outcome</a>
+          <a href="#learned">What I learned</a>
+        </nav>
+        <div class="rail-box">
+          <span class="section-label">Details</span>
+          <dl>
+            <div class="kv"><dt>Role</dt><dd>Product designer</dd></div>
+            <div class="kv"><dt>Service</dt><dd>Product design</dd></div>
+            <div class="kv"><dt>Scale</dt><dd>~1,500 orgs</dd></div>
+            <div class="kv"><dt>Year</dt><dd>2026</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="foot" style="margin-top:0">
+      <span>Also: <a href="case-study-noa.html">Noa</a>, a personal iOS app I designed and built ↗</span>
+      <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    </footer>
+  </main>
 </div>
 
-<main id="main">
-<header>
-  <div class="wrap">
-    <p class="eyebrow">Kato <span aria-hidden="true">×</span> 2026 <span aria-hidden="true">×</span> case study</p>
-    <h1>From countless hours chasing invoices to <em>98% paid on time</em></h1>
-    <p class="hero-sub">Moving ~700 organisations from a manual, CS-led invoicing model to a fully self-serve billing experience.</p>
-    <div class="meta-grid">
-      <div><b>ROLE</b>Product Designer</div>
-      <div><b>SERVICE</b>Product design</div>
-      <div><b>SCALE</b>~1,500 organisations<br>~£1M in transactions</div>
-      <div><b>YEAR</b>2026</div>
-    </div>
-    <div class="shot tall hero-shot filled"><img src="https://framerusercontent.com/images/I2gnW0qnk7Hu20R68qETXLvZk.png" alt="Kato society billing"></div>
-  </div>
-</header>
+<nav class="tabs" aria-label="Main"><a href="index.html">Home</a><a class="on" href="work.html" aria-current="page">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="toast" role="status" aria-live="polite"></div>
 
-<section class="cs wrap">
+<script>
+  const toast=document.querySelector('.toast'); let tm;
+  document.querySelectorAll('[data-soon]').forEach(el=>el.addEventListener('click',e=>{
+    e.preventDefault(); toast.textContent=el.dataset.soon+' screen comes next'; toast.classList.add('show');
+    clearTimeout(tm); tm=setTimeout(()=>toast.classList.remove('show'),1800);
+  }));
 
-  <div class="cs-block">
-    <h2 class="cs-label">Background</h2>
-    <div class="cs-body">
-      <p>Kato's society billing process was heavily manual, placing significant operational load on the Customer Success team and creating friction for organisations managing their members.</p>
-      <p>The goal was to move from a CS-led invoicing model to a fully self-serve billing experience, enabling organisations to manage seats, payments, and renewals directly within the product.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The problem</h2>
-    <div class="cs-body">
-      <p class="dim">Billing for societies was fragmented and manual:</p>
-      <ul>
-        <li><b>Organisations relied on the CS team</b> to renew memberships annually, adjust seat counts, and process invoices manually</li>
-        <li><b>No in-product way</b> to add or manage members, purchase additional seats, or handle renewals independently</li>
-        <li><b>Renewal periods created a high operational burden:</b> manual outreach and coordination across ~1,500 organisations</li>
-        <li><b>Users joining societies did so externally</b> via society websites, creating a disconnected experience</li>
-      </ul>
-      <p class="dim">The result: high internal overhead, slow turnaround for customers, and limited scalability of the model.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The approach</h2>
-    <div class="cs-body">
-      <h3><span class="n">01</span>Self-serve billing &amp; seat management</h3>
-      <p>A billing experience that lets organisations pay for memberships directly by card, add and manage members within the product, purchase additional seats on demand, and handle renewals without CS involvement.</p>
-      <div class="callout">
-        <div class="c-label">Key considerations</div>
-        <p>Making complex billing states feel simple. Keeping pricing and seat logic clear at every step. Reducing the risk of user error during payment and renewal flows.</p>
-      </div>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/C1lvrRDvCXO0pkO71ZLLm3jOoQ.png" alt="Self-serve billing"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/KRHMGAbSeyB90y0MPyTwCD6oH2c.png" alt="Seat management"></div>
-      </div>
-
-      <h3><span class="n">02</span>Renewal flow redesign</h3>
-      <p>Previously, CS manually contacted organisations, seat counts were confirmed over email, and invoices were created and processed by hand. The new approach: a clear in-product renewal flow with visibility of current seat usage and the upcoming renewal, letting organisations adjust seats and confirm in a few steps.</p>
-      <ul>
-        <li>Removed manual coordination and back-and-forth communication</li>
-        <li>Removed external invoicing workflows entirely</li>
-      </ul>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/UFdNfhJtGJS3RWKEG8Nuz1C6QM.png" alt="Renewal flow"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/akiONm2PIwHJO7MJhGr9GbMIqm0.png" alt="Renewal confirmation"></div>
-      </div>
-
-      <h3><span class="n">03</span>Join requests: bringing users in-product</h3>
-      <p>Users and organisations can now discover societies within the platform and request to join directly in-product, previously handled externally via society websites.</p>
-      <ul>
-        <li>Reduced friction in user acquisition</li>
-        <li>Brought a key part of the journey into Kato, creating a more cohesive product experience</li>
-      </ul>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/ul7EGXk0rPL4SfmCANwEUoJXw.png" alt="Society discovery"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/nqNaXqwuXXsSIU7iiprRefMZqc.png" alt="Join request flow"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="wrap">
-  <div class="metrics-band">
-    <div class="metrics">
-      <div class="metric"><div class="num">98<sup>%</sup></div><p>of organisations paid on time</p></div>
-      <div class="metric"><div class="num">90<sup>%</sup></div><p>paid by card on renewal date</p></div>
-      <div class="metric"><div class="num">1<sup>%</sup></div><p>requiring follow-up: just 7 of ~700</p></div>
-    </div>
-  </div>
-</div>
-
-<section class="cs wrap">
-  <div class="cs-block">
-    <h2 class="cs-label">Outcome</h2>
-    <div class="cs-body">
-      <p>Shifted a manual, CS-led process to a scalable self-serve system.</p>
-      <ul>
-        <li><b>98% of ~700 organisations paid on time</b>, with 90% paying by card automatically on the renewal date</li>
-        <li><b>Just 7 organisations out of ~700</b> required active chasing, down from countless hours of manual follow-up the previous year</li>
-        <li><b>Reduced operational load</b> across ~1,500 organisations</li>
-        <li><b>Enabled ~£1M in transactions</b> through the platform</li>
-        <li>Improved speed and autonomy for organisations managing memberships</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Learnings</h2>
-    <div class="cs-body">
-      <ul>
-        <li>Complex systems don't need complex interfaces; clarity in states and actions is everything</li>
-        <li>Self-serve only works when users feel confident they won't make mistakes</li>
-        <li>Removing internal dependencies is often the highest-leverage product work</li>
-        <li>Bringing fragmented journeys into the product unlocks both growth and usability gains</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="next wrap">
-  <a href="case-study-atlas.html">
-    <div class="n-label">Next project · 03</div>
-    <div class="n-title">Kato <em>Atlas</em> →</div>
-  </a>
-</div>
-
-</main>
-
-<footer>
-  <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris · Designed and built by me</span>
-    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
-  </div>
-</footer>
-
-<script src="lightbox.js?v=2026-10-25"></script>
+  const links=[...document.querySelectorAll('.toc a')];
+  const mark=id=>links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+id));
+  const sections=[...document.querySelectorAll('.article section[id]')];
+  const spy=()=>{ let cur=sections[0]; sections.forEach(s=>{ if(s.getBoundingClientRect().top<=innerHeight*.3) cur=s }); mark(cur.id) };
+  addEventListener('scroll',spy,{passive:true}); spy();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

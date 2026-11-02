@@ -3,173 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kato Atlas | Sam Harris</title>
+<title>Atlas | Sam Harris</title>
+<meta name="description" content="Building the workflows and dashboard that turn agent transactions into trusted, live market intelligence.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css?v=2026-10-25b">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav aria-label="Main">
-  <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
-    <div class="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+<div class="app">
+  <aside class="side" aria-label="Main">
+    <div class="side-top">
+      <a class="logo" href="index.html">Sam Harris<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="on" href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
-  </div>
-</nav>
+    <span class="status"><i aria-hidden="true"></i>Open to new roles</span>
+  </aside>
 
-<div class="mobile-nav" id="mobile-nav">
-    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
-    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
-    <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+  <main class="main cs">
+    <div class="topbar"><a class="logo" href="index.html">Sam Harris<span>.</span></a><span class="status"><i aria-hidden="true"></i>Open to roles</span></div>
+
+    <div class="cs-top">
+      <div class="crumb"><a href="work.html">Work</a><i> / </i>Atlas</div>
+      <nav class="pager" aria-label="Other projects">
+        <a href="case-study-billing.html">← Society Billing</a>
+        <a class="fwd" href="case-study-design-system.html">Design System →</a>
+      </nav>
+    </div>
+
+    <header class="cs-hero" style="background:var(--mint)">
+      <div class="cs-hero-copy">
+        <div class="eyebrow" style="color:var(--ink)">Kato · Atlas</div>
+        <h1>The UK&#x27;s real-time commercial property data platform, zero to one</h1>
+        <p class="intro" style="color:var(--ink)">Building the workflows and dashboard that turn agent transactions into trusted, live market intelligence.</p>
+        <p class="live"><b class="shipped">Shipped</b><span class="sep" aria-hidden="true">·</span><span>Design and research</span></p>
+      </div>
+      <div class="shot"><img src="https://framerusercontent.com/images/al8qqj1b2RsLgm15j1PerQAJXw.png" alt="" loading="lazy"></div>
+    </header>
+
+    <section class="stats" style="--n:3" aria-label="Results"><div class="stat"><span class="metric">100+</span><span class="caption">companies now trust Atlas</span></div><div class="stat"><span class="metric wide">hrs → secs</span><span class="caption">to produce comparable evidence</span></div><div class="stat"><span class="metric">0–1</span><span class="caption">designed and launched from scratch</span></div></section>
+
+    <div class="cs-body">
+      <article class="article">
+        <section id="overview"><div class="measure"><span class="section-label">Overview</span></div><div class="measure"><p class="long">Atlas is Kato's real-time commercial property data platform: a trusted, collaborative source of transaction data contributed by agents, for agents. It was built from scratch as a 0–1 product.</p><p class="long soft">I owned the design of the dashboard, the primary surface where agents discover, search, and act on market intelligence. Alongside this, we ran user testing across the full product and worked closely with the wider team on the transaction workflows, contributing through design critiques, usability testing, and iterative feedback.</p></div></section><section id="problem"><span class="section-label">The problem</span><h2 class="title">The UK commercial real estate market had no single, trusted source of transaction data</h2><div class="problems"><div class="problem"><span>01</span><p><b>Comparable evidence was fragmented:</b> agents relied on chasing peers via phone and email to gather transaction details</p></div><div class="problem"><span>02</span><p><b>Significant data lag:</b> information from traditional channels was often weeks or months out of date</p></div><div class="problem"><span>03</span><p><b>No real-time visibility</b> into market activity, agency performance, or emerging opportunities</p></div><div class="problem"><span>04</span><p><b>Double-keying and manual processes:</b> the same transaction data entered into multiple systems</p></div><div class="problem"><span>05</span><p><b>No standardised way</b> to verify or validate deal data across firms</p></div></div><p class="result"><span>THE RESULT</span>slow, unreliable comparable evidence for valuations and pitches, missed business development opportunities, and an industry operating on incomplete information.</p></section><section id="the-approach-01"><div class="measure"><span class="section-label">01 · Approach</span><h2 class="title">Homepage &amp; dashboard</h2></div><div class="measure"><p class="long soft">Led the design of the Atlas homepage, the central surface where agents land, search, and extract value from the platform.</p><ul class="points"><li><b>Interactive search and mapping:</b> by location, custom polygon drawing, or pre-populated markets and submarkets</li><li><b>Real-time comparable evidence:</b> verified lease and sale transactions surfaced instantly</li><li><b>Agency rankings:</b> filterable by region, sector, and deal type to benchmark performance and spot opportunity gaps</li><li><b>Saved searches and export:</b> custom polygons, Excel export, and alerts</li></ul><div class="note"><span class="section-label">Design challenge</span><p>Balancing information density with clarity. Agents needed to scan large volumes of transaction data quickly while still being able to drill into individual deal details.</p></div></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/DWVCZCh2R9VFZwUBbpdk3JZ6A.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/UfWyI8WBGZmSQxyeVn8LEVuhI.png" alt="" loading="lazy"></div></div></section><section id="the-approach-02"><div class="measure"><span class="section-label">02 · Approach</span><h2 class="title">Testing, critique &amp; collaboration</h2></div><div class="measure"><p class="long soft">Ran user testing throughout the product lifecycle, from early concepts to pre-launch refinement, and shaped the transaction workflows and reporting flows through critique and iterative feedback, rather than direct ownership.</p><ul class="points"><li><b>Tested the full experience:</b> dashboard, contribution workflows, and report generation, with agency leaders, valuers, investment agents, and research teams across multiple firms</li><li><b>Identified friction points</b> in the contribution flow that were blocking adoption, feeding findings back to shape each iteration</li><li><b>Critiqued the publish-to-Atlas flow:</b> confidentiality controls, data entry patterns, edge cases, and error states</li><li><b>Refined report generation</b> with valuers and agency leaders, connecting dashboard search to shareable, branded comparable evidence</li></ul><div class="note"><span class="section-label">Key insight</span><p>Agency leaders needed fundamentally different things from the dashboard than valuers. This shaped how we structured information hierarchy and entry points.</p></div></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/n18ygU1WxqTlRLpeCJhGeN7etTo.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/YLYTBEr7srkT97IvV6RqRIIo4yM.png" alt="" loading="lazy"></div></div></section><section id="outcome"><div class="outcome"><span class="section-label">Outcome</span><ul class="outs"><li>Launched a 0–1 product now trusted by 100+ companies including Savills, Knight Frank, CBRE, JLL, Cushman &amp; Wakefield, and Colliers</li><li>Reduced comparable evidence generation from hours of manual research to seconds</li><li>Eliminated double-keying through seamless workflow integration</li><li>Established a collaborative, industry-wide data standard for UK commercial property</li></ul></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/JkwiQkQuR52hhKCVCbHtcoAU.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/dOa9U8nj2vP2YBSjo9lvdJWSwE.png" alt="" loading="lazy"></div></div></section><section id="learned"><span class="section-label">What I learned</span><ol class="learn"><li><span>01</span>In 0–1, user testing isn't a phase; it's continuous, and the earlier you test with real users the fewer assumptions survive</li><li><span>02</span>Not every contribution needs to be direct ownership. Collaborative critique and testing can shape a product just as meaningfully</li><li><span>03</span>Data platforms live or die on trust. The UX of verification, provenance, and confidentiality matters as much as the data itself</li><li><span>04</span>Different user types need fundamentally different things from the same interface; one dashboard doesn't mean one experience</li></ol></section>
+        <a class="next" href="case-study-design-system.html" style="background:var(--lilac)"><div class="lead"><div class="label"><span>Next project · Design System</span></div><h2 class="title">Design System</h2><p class="caption">One system for design and development</p></div><span class="go-lg" aria-hidden="true">→</span></a>
+      </article>
+
+      <aside class="rail">
+        <nav class="rail-box toc" aria-label="On this page">
+          <span class="section-label">On this page</span>
+          <a href="#overview">Overview</a><a href="#problem">The problem</a><a href="#the-approach-01">01 · Homepage &amp; dashboard</a><a href="#the-approach-02">02 · Testing, critique &amp; collaboration</a><a href="#outcome">Outcome</a><a href="#learned">What I learned</a>
+        </nav>
+        <div class="rail-box">
+          <span class="section-label">Details</span>
+          <dl><div class="kv"><dt>Role</dt><dd>Product Designer</dd></div><div class="kv"><dt>Service</dt><dd>Product design<br>User research</dd></div><div class="kv"><dt>Trusted by</dt><dd>100+ companies incl. Savills,<br>Knight Frank, CBRE, JLL</dd></div><div class="kv"><dt>Type</dt><dd>0–1 product</dd></div></dl>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="foot" style="margin-top:0">
+      <span>Want the full story? <a href="sam-harris-cv.pdf" target="_blank" rel="noopener">Download my CV</a></span>
+      <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    </footer>
+  </main>
 </div>
 
-<main id="main">
-<header>
-  <div class="wrap">
-    <p class="eyebrow">Kato <span aria-hidden="true">×</span> case study</p>
-    <h1>The UK's real-time commercial property data platform, <em>zero to one</em></h1>
-    <p class="hero-sub">Building the workflows and dashboard that turn agent transactions into trusted, live market intelligence.</p>
-    <div class="meta-grid">
-      <div><b>ROLE</b>Product Designer</div>
-      <div><b>SERVICE</b>Product design<br>User research</div>
-      <div><b>TRUSTED BY</b>100+ companies incl. Savills,<br>Knight Frank, CBRE, JLL</div>
-      <div><b>TYPE</b>0–1 product</div>
-    </div>
-    <div class="shot tall hero-shot filled"><img src="https://framerusercontent.com/images/al8qqj1b2RsLgm15j1PerQAJXw.png" alt="Atlas dashboard"></div>
-  </div>
-</header>
+<nav class="tabs" aria-label="Main"><a href="index.html">Home</a><a class="on" href="work.html" aria-current="page">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="toast" role="status" aria-live="polite"></div>
 
-<section class="cs wrap">
+<script>
+  const toast=document.querySelector('.toast'); let tm;
+  document.querySelectorAll('[data-soon]').forEach(el=>el.addEventListener('click',e=>{
+    e.preventDefault(); toast.textContent=el.dataset.soon+' screen comes next'; toast.classList.add('show');
+    clearTimeout(tm); tm=setTimeout(()=>toast.classList.remove('show'),1800);
+  }));
 
-  <div class="cs-block">
-    <h2 class="cs-label">Overview</h2>
-    <div class="cs-body">
-      <p>Atlas is Kato's real-time commercial property data platform: a trusted, collaborative source of transaction data contributed by agents, for agents. It was built from scratch as a 0–1 product.</p>
-      <p>I owned the design of the dashboard, the primary surface where agents discover, search, and act on market intelligence. Alongside this, we ran user testing across the full product and worked closely with the wider team on the transaction workflows, contributing through design critiques, usability testing, and iterative feedback.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The problem</h2>
-    <div class="cs-body">
-      <p class="dim">The UK commercial real estate market had no single, trusted source of transaction data:</p>
-      <ul>
-        <li><b>Comparable evidence was fragmented:</b> agents relied on chasing peers via phone and email to gather transaction details</li>
-        <li><b>Significant data lag:</b> information from traditional channels was often weeks or months out of date</li>
-        <li><b>No real-time visibility</b> into market activity, agency performance, or emerging opportunities</li>
-        <li><b>Double-keying and manual processes:</b> the same transaction data entered into multiple systems</li>
-        <li><b>No standardised way</b> to verify or validate deal data across firms</li>
-      </ul>
-      <p class="dim">The result: slow, unreliable comparable evidence for valuations and pitches, missed business development opportunities, and an industry operating on incomplete information.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The approach</h2>
-    <div class="cs-body">
-      <h3><span class="n">01</span>Homepage &amp; dashboard</h3>
-      <p>Led the design of the Atlas homepage, the central surface where agents land, search, and extract value from the platform.</p>
-      <ul>
-        <li><b>Interactive search and mapping:</b> by location, custom polygon drawing, or pre-populated markets and submarkets</li>
-        <li><b>Real-time comparable evidence:</b> verified lease and sale transactions surfaced instantly</li>
-        <li><b>Agency rankings:</b> filterable by region, sector, and deal type to benchmark performance and spot opportunity gaps</li>
-        <li><b>Saved searches and export:</b> custom polygons, Excel export, and alerts</li>
-      </ul>
-      <div class="callout">
-        <div class="c-label">Design challenge</div>
-        <p>Balancing information density with clarity. Agents needed to scan large volumes of transaction data quickly while still being able to drill into individual deal details.</p>
-      </div>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/DWVCZCh2R9VFZwUBbpdk3JZ6A.png" alt="Search and mapping"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/UfWyI8WBGZmSQxyeVn8LEVuhI.png" alt="Comparable evidence"></div>
-      </div>
-
-      <h3><span class="n">02</span>Testing, critique &amp; collaboration</h3>
-      <p>Ran user testing throughout the product lifecycle, from early concepts to pre-launch refinement, and shaped the transaction workflows and reporting flows through critique and iterative feedback, rather than direct ownership.</p>
-      <ul>
-        <li><b>Tested the full experience:</b> dashboard, contribution workflows, and report generation, with agency leaders, valuers, investment agents, and research teams across multiple firms</li>
-        <li><b>Identified friction points</b> in the contribution flow that were blocking adoption, feeding findings back to shape each iteration</li>
-        <li><b>Critiqued the publish-to-Atlas flow:</b> confidentiality controls, data entry patterns, edge cases, and error states</li>
-        <li><b>Refined report generation</b> with valuers and agency leaders, connecting dashboard search to shareable, branded comparable evidence</li>
-      </ul>
-      <div class="callout">
-        <div class="c-label">Key insight</div>
-        <p>Agency leaders needed fundamentally different things from the dashboard than valuers. This shaped how we structured information hierarchy and entry points.</p>
-      </div>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/n18ygU1WxqTlRLpeCJhGeN7etTo.png" alt="Testing sessions"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/YLYTBEr7srkT97IvV6RqRIIo4yM.png" alt="Workflow iterations"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="wrap">
-  <div class="metrics-band">
-    <div class="metrics">
-      <div class="metric"><div class="num">100<sup>+</sup></div><p>companies now trust Atlas</p></div>
-      <div class="metric"><div class="num">hrs → <em>secs</em></div><p>to produce comparable evidence</p></div>
-      <div class="metric"><div class="num">0–1</div><p>designed and launched from scratch</p></div>
-    </div>
-  </div>
-</div>
-
-<section class="cs wrap">
-  <div class="cs-block">
-    <h2 class="cs-label">Outcome</h2>
-    <div class="cs-body">
-      <ul>
-        <li><b>Launched a 0–1 product</b> now trusted by 100+ companies including Savills, Knight Frank, CBRE, JLL, Cushman &amp; Wakefield, and Colliers</li>
-        <li><b>Reduced comparable evidence generation</b> from hours of manual research to seconds</li>
-        <li><b>Eliminated double-keying</b> through seamless workflow integration</li>
-        <li><b>Established a collaborative, industry-wide data standard</b> for UK commercial property</li>
-      </ul>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/JkwiQkQuR52hhKCVCbHtcoAU.png" alt="Report output"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/dOa9U8nj2vP2YBSjo9lvdJWSwE.png" alt="Agency rankings"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Learnings</h2>
-    <div class="cs-body">
-      <ul>
-        <li>In 0–1, user testing isn't a phase; it's continuous, and the earlier you test with real users the fewer assumptions survive</li>
-        <li>Not every contribution needs to be direct ownership. Collaborative critique and testing can shape a product just as meaningfully</li>
-        <li>Data platforms live or die on trust. The UX of verification, provenance, and confidentiality matters as much as the data itself</li>
-        <li>Different user types need fundamentally different things from the same interface; one dashboard doesn't mean one experience</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="next wrap">
-  <a href="case-study-design-system.html">
-    <div class="n-label">Next project · 04</div>
-    <div class="n-title">Kato <em>Design System</em> →</div>
-  </a>
-</div>
-
-</main>
-
-<footer>
-  <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris · Designed and built by me</span>
-    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
-  </div>
-</footer>
-
-<script src="lightbox.js?v=2026-10-25"></script>
+  const links=[...document.querySelectorAll('.toc a')];
+  const mark=id=>links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+id));
+  const sections=[...document.querySelectorAll('.article section[id]')];
+  const spy=()=>{ let cur=sections[0]; sections.forEach(s=>{ if(s.getBoundingClientRect().top<=innerHeight*.3) cur=s }); mark(cur.id) };
+  addEventListener('scroll',spy,{passive:true}); spy();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

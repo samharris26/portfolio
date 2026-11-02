@@ -4,141 +4,91 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VenueScanner Dashboard | Sam Harris</title>
+<meta name="description" content="A comprehensive, user-friendly platform for hosts to oversee bookings, communicate with clients, and manage enquiries efficiently.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css?v=2026-10-25b">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav aria-label="Main">
-  <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
-    <div class="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+<div class="app">
+  <aside class="side" aria-label="Main">
+    <div class="side-top">
+      <a class="logo" href="index.html">Sam Harris<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="on" href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
-  </div>
-</nav>
+    <span class="status"><i aria-hidden="true"></i>Open to new roles</span>
+  </aside>
 
-<div class="mobile-nav" id="mobile-nav">
-    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
-    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
-    <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+  <main class="main cs">
+    <div class="topbar"><a class="logo" href="index.html">Sam Harris<span>.</span></a><span class="status"><i aria-hidden="true"></i>Open to roles</span></div>
+
+    <div class="cs-top">
+      <div class="crumb"><a href="work.html">Work</a><i> / </i>Dashboard</div>
+      <nav class="pager" aria-label="Other projects">
+        <a href="case-study-noa.html">← Noa</a>
+        <a class="fwd" href="case-study-venuescanner-booking.html">VenueScanner Booking →</a>
+      </nav>
+    </div>
+
+    <header class="cs-hero" style="background:var(--surface)">
+      <div class="cs-hero-copy">
+        <div class="eyebrow" style="color:var(--ink)">VenueScanner · Dashboard · 2024</div>
+        <h1>Improved user control with the introduction of a dashboard</h1>
+        <p class="intro" style="color:var(--ink)">A comprehensive, user-friendly platform for hosts to oversee bookings, communicate with clients, and manage enquiries efficiently.</p>
+        <p class="live"><b class="shipped">Shipped 2024</b><span class="sep" aria-hidden="true">·</span><span>Design</span></p>
+      </div>
+      <div class="shot"><img src="https://framerusercontent.com/images/A4WEP6ioprCNWtm2XjXDFgorA.png" alt="" loading="lazy"></div>
+    </header>
+
+    
+
+    <div class="cs-body">
+      <article class="article">
+        <section id="background"><div class="measure"><span class="section-label">Background</span></div><div class="measure"><p class="long">The VenueScanner Dashboard project aimed to revolutionise the venue management experience for hosts by providing a comprehensive, user-friendly platform. The goal was to streamline the management process, making it easier for hosts to oversee their bookings, communicate with clients, and manage their enquiries efficiently.</p></div></section><section id="challenges"><div class="measure"><span class="section-label">Challenges</span></div><div class="measure"><ul class="points"><li><b>Creating an intuitive interface</b> for managing bookings and venue details</li><li><b>Ensuring seamless communication</b> between hosts and clients</li><li><b>Integrating various functionalities</b> into a single, cohesive dashboard</li></ul><div class="note"><span class="section-label">Constraint</span><p>Due to the commercial nature of the decision and project constraints, no formal user testing was conducted during design and implementation; validation came through internal reviews and stakeholder feedback.</p></div></div></section><section id="business-goals"><div class="measure"><span class="section-label">Business goals</span></div><div class="measure"><ul class="points"><li>Increase the efficiency of venue management processes</li><li>Improve volume of venue enquiries</li><li>Enhance communication between hosts and clients</li><li>Improve overall user satisfaction</li></ul></div></section><section id="the-approach-01"><div class="measure"><span class="section-label">01 · Approach</span><h2 class="title">Usability-first, from the ground up</h2></div><div class="measure"><p class="long soft">As a brand-new feature replacing the previous messaging platform, the primary focus was designing an intuitive, efficient experience from scratch. CTAs were strategically placed to avoid confusion, and the interface was optimised to reduce the number of clicks required for task completion. Consistent visual design and a clear tone of voice aligned with VenueScanner's branding.</p></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/IbXorMshgDMb8xDhGjGh7SSRA.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/gob1CqTuefV5OBXGSo0WaY68OGE.png" alt="" loading="lazy"></div></div></section><section id="the-approach-02"><div class="measure"><span class="section-label">02 · Approach</span><h2 class="title">Wireframes &amp; validation</h2></div><div class="measure"><p class="long soft">Wireframes visualised the new dashboard with a focus on simplicity and ease of use for the MVP. With no formal user testing available, the design was validated through internal reviews and stakeholder feedback, which confirmed the approach effectively addressed hosts' needs and set a solid foundation for post-launch iteration.</p></div></section><section id="the-approach-03"><div class="measure"><span class="section-label">03 · Approach</span><h2 class="title">Final design</h2></div><div class="measure"><p class="long soft">An intuitive dashboard for managing enquiries, communicating with venues, and overseeing event details. Key actions are prominently displayed, and the user flow is optimised for efficiency.</p></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/dWszMtoptQnK9er1i5crVCeN9Cg.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/y0ZFuddBWDtaIAJeyeB7f5gUk.png" alt="" loading="lazy"></div></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/6uAMr8cCayxX2Te1zLLlcqGcc.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/pIpcnNhRwHiXPO4ocYGSKmZJNo.png" alt="" loading="lazy"></div></div></section><section id="next-steps"><div class="measure"><span class="section-label">Next steps</span></div><div class="measure"><ul class="points"><li>Monitor user interaction with the new dashboard</li><li>Gather feedback for continuous improvement</li><li>Explore additional features, like shortlist and recommendation features</li></ul></div></section>
+        <a class="next" href="case-study-venuescanner-booking.html" style="background:var(--surface)"><div class="lead"><div class="label"><span>Next project · VenueScanner Booking</span></div><h2 class="title">VenueScanner Booking</h2><p class="caption">&#x27;Mark as Booked&#x27; redesigned to lift conversions</p></div><span class="go-lg" aria-hidden="true">→</span></a>
+      </article>
+
+      <aside class="rail">
+        <nav class="rail-box toc" aria-label="On this page">
+          <span class="section-label">On this page</span>
+          <a href="#background">Background</a><a href="#challenges">Challenges</a><a href="#business-goals">Business goals</a><a href="#the-approach-01">01 · Usability-first, from the ground up</a><a href="#the-approach-02">02 · Wireframes &amp; validation</a><a href="#the-approach-03">03 · Final design</a><a href="#next-steps">Next steps</a>
+        </nav>
+        <div class="rail-box">
+          <span class="section-label">Details</span>
+          <dl><div class="kv"><dt>Role</dt><dd>Sole UX/UI Designer</dd></div><div class="kv"><dt>Service</dt><dd>Product design</dd></div><div class="kv"><dt>Type</dt><dd>New feature, replacing<br>the messaging platform</dd></div><div class="kv"><dt>Year</dt><dd>2024</dd></div></dl>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="foot" style="margin-top:0">
+      <span>Want the full story? <a href="sam-harris-cv.pdf" target="_blank" rel="noopener">Download my CV</a></span>
+      <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    </footer>
+  </main>
 </div>
 
-<main id="main">
-<header>
-  <div class="wrap">
-    <p class="eyebrow">VenueScanner <span aria-hidden="true">×</span> 2024 <span aria-hidden="true">×</span> case study</p>
-    <h1>Improved user control with the introduction of a <em>dashboard</em></h1>
-    <p class="hero-sub">A comprehensive, user-friendly platform for hosts to oversee bookings, communicate with clients, and manage enquiries efficiently.</p>
-    <div class="meta-grid">
-      <div><b>ROLE</b>Sole UX/UI Designer</div>
-      <div><b>SERVICE</b>Product design</div>
-      <div><b>TYPE</b>New feature, replacing<br>the messaging platform</div>
-      <div><b>YEAR</b>2024</div>
-    </div>
-    <div class="shot tall hero-shot filled"><img src="https://framerusercontent.com/images/A4WEP6ioprCNWtm2XjXDFgorA.png" alt="VenueScanner host dashboard"></div>
-  </div>
-</header>
+<nav class="tabs" aria-label="Main"><a href="index.html">Home</a><a class="on" href="work.html" aria-current="page">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="toast" role="status" aria-live="polite"></div>
 
-<section class="cs wrap">
+<script>
+  const toast=document.querySelector('.toast'); let tm;
+  document.querySelectorAll('[data-soon]').forEach(el=>el.addEventListener('click',e=>{
+    e.preventDefault(); toast.textContent=el.dataset.soon+' screen comes next'; toast.classList.add('show');
+    clearTimeout(tm); tm=setTimeout(()=>toast.classList.remove('show'),1800);
+  }));
 
-  <div class="cs-block">
-    <h2 class="cs-label">Background</h2>
-    <div class="cs-body">
-      <p>The VenueScanner Dashboard project aimed to revolutionise the venue management experience for hosts by providing a comprehensive, user-friendly platform. The goal was to streamline the management process, making it easier for hosts to oversee their bookings, communicate with clients, and manage their enquiries efficiently.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Challenges</h2>
-    <div class="cs-body">
-      <ul>
-        <li><b>Creating an intuitive interface</b> for managing bookings and venue details</li>
-        <li><b>Ensuring seamless communication</b> between hosts and clients</li>
-        <li><b>Integrating various functionalities</b> into a single, cohesive dashboard</li>
-      </ul>
-      <div class="callout">
-        <div class="c-label">Constraint</div>
-        <p>Due to the commercial nature of the decision and project constraints, no formal user testing was conducted during design and implementation; validation came through internal reviews and stakeholder feedback.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Business goals</h2>
-    <div class="cs-body">
-      <ul>
-        <li>Increase the efficiency of venue management processes</li>
-        <li>Improve volume of venue enquiries</li>
-        <li>Enhance communication between hosts and clients</li>
-        <li>Improve overall user satisfaction</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The approach</h2>
-    <div class="cs-body">
-      <h3><span class="n">01</span>Usability-first, from the ground up</h3>
-      <p>As a brand-new feature replacing the previous messaging platform, the primary focus was designing an intuitive, efficient experience from scratch. CTAs were strategically placed to avoid confusion, and the interface was optimised to reduce the number of clicks required for task completion. Consistent visual design and a clear tone of voice aligned with VenueScanner's branding.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/IbXorMshgDMb8xDhGjGh7SSRA.png" alt="Enquiry management"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/gob1CqTuefV5OBXGSo0WaY68OGE.png" alt="Host communication"></div>
-      </div>
-
-      <h3><span class="n">02</span>Wireframes &amp; validation</h3>
-      <p>Wireframes visualised the new dashboard with a focus on simplicity and ease of use for the MVP. With no formal user testing available, the design was validated through internal reviews and stakeholder feedback, which confirmed the approach effectively addressed hosts' needs and set a solid foundation for post-launch iteration.</p>
-
-      <h3><span class="n">03</span>Final design</h3>
-      <p>An intuitive dashboard for managing enquiries, communicating with venues, and overseeing event details. Key actions are prominently displayed, and the user flow is optimised for efficiency.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/dWszMtoptQnK9er1i5crVCeN9Cg.png" alt="Final dashboard"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/y0ZFuddBWDtaIAJeyeB7f5gUk.png" alt="Event details"></div>
-      </div>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/6uAMr8cCayxX2Te1zLLlcqGcc.png" alt="Booking overview"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/pIpcnNhRwHiXPO4ocYGSKmZJNo.png" alt="Messaging"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Next steps</h2>
-    <div class="cs-body">
-      <ul>
-        <li>Monitor user interaction with the new dashboard</li>
-        <li>Gather feedback for continuous improvement</li>
-        <li>Explore additional features, like shortlist and recommendation features</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="next wrap">
-  <a href="case-study-venuescanner-booking.html">
-    <div class="n-label">Next project · 07</div>
-    <div class="n-title">VenueScanner <em>Booking</em> →</div>
-  </a>
-</div>
-
-</main>
-
-<footer>
-  <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris · Designed and built by me</span>
-    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
-  </div>
-</footer>
-
-<script src="lightbox.js?v=2026-10-25"></script>
+  const links=[...document.querySelectorAll('.toc a')];
+  const mark=id=>links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+id));
+  const sections=[...document.querySelectorAll('.article section[id]')];
+  const spy=()=>{ let cur=sections[0]; sections.forEach(s=>{ if(s.getBoundingClientRect().top<=innerHeight*.3) cur=s }); mark(cur.id) };
+  addEventListener('scroll',spy,{passive:true}); spy();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

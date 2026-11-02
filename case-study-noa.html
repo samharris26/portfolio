@@ -3,139 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noa | Sam Harris</title>
+<title>Personal Noa | Sam Harris</title>
+<meta name="description" content="A consumer app that simplifies how individuals, couples, and families manage daily life (calendars, tasks, lists, and reminders) by letting people interact naturally instead of forcing them into rigid systems. Now live on the App Store with over 200 users.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css?v=2026-10-25b">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav aria-label="Main">
-  <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
-    <div class="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+<div class="app">
+  <aside class="side" aria-label="Main">
+    <div class="side-top">
+      <a class="logo" href="index.html">Sam Harris<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="on" href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
-  </div>
-</nav>
+    <span class="status"><i aria-hidden="true"></i>Open to new roles</span>
+  </aside>
 
-<div class="mobile-nav" id="mobile-nav">
-    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
-    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
-    <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
-</div>
+  <main class="main cs">
+    <div class="topbar"><a class="logo" href="index.html">Sam Harris<span>.</span></a><span class="status"><i aria-hidden="true"></i>Open to roles</span></div>
 
-<main id="main">
-<header>
-  <div class="wrap">
-    <p class="eyebrow">Personal project <span aria-hidden="true">×</span> case study</p>
-    <h1>A shared <em>operating system</em> for families</h1>
-    <p class="hero-sub">A consumer app that simplifies how individuals, couples, and families manage daily life (calendars, tasks, lists, and reminders) by letting people interact naturally instead of forcing them into rigid systems. Now live on the App Store with over 200 users.</p>
-    <div class="meta-grid">
-      <div><b>ROLE</b>Designer &amp; builder</div>
-      <div><b>SERVICE</b>Product design<br>AI-assisted build</div>
-      <div><b>STACK</b>Figma · Claude · Cursor</div>
-      <div><b>STATUS</b>Live on the App Store<br>200+ users</div>
+    <div class="cs-top">
+      <div class="crumb"><a href="work.html">Work</a><i> / </i>Noa</div>
+      <nav class="pager" aria-label="Other projects">
+        <a href="case-study-design-system.html">← Design System</a>
+        <a class="fwd" href="case-study-venuescanner-dashboard.html">VenueScanner Dashboard →</a>
+      </nav>
     </div>
-    <div class="shot panorama hero-shot filled"><img src="images/noa/hero.jpg" alt="Noa home, calendar, tasks and lists"></div>
-  </div>
-</header>
 
-<section class="cs wrap">
-
-  <div class="cs-block">
-    <h2 class="cs-label">The problem</h2>
-    <div class="cs-body">
-      <p class="dim">Managing everyday life is fragmented and mentally taxing:</p>
-      <ul>
-        <li><b>Information is spread</b> across calendars, notes, messages, and mental load, usually held by one person</li>
-        <li><b>Coordination between partners or families</b> is inconsistent</li>
-        <li><b>Existing tools are either too simple</b> (notes apps) <b>or too complex</b> (Notion-style systems)</li>
-        <li><b>Creating structure requires effort</b> before any value is realised</li>
-      </ul>
-      <p class="dim">The result: missed events ("you didn't tell me?"), uneven mental load across households, and constant low-level friction.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The approach</h2>
-    <div class="cs-body">
-      <div class="callout">
-        <div class="c-label">Core principle</div>
-        <p>Let users think naturally, and let the system handle structure.</p>
+    <header class="cs-hero" style="background:var(--peach)">
+      <div class="cs-hero-copy">
+        <div class="eyebrow" style="color:var(--ink)">Personal · Noa</div>
+        <h1>A shared operating system for families</h1>
+        <p class="intro" style="color:var(--ink)">A consumer app that simplifies how individuals, couples, and families manage daily life (calendars, tasks, lists, and reminders) by letting people interact naturally instead of forcing them into rigid systems. Now live on the App Store with over 200 users.</p>
+        <p class="live"><b class="store">On the App Store</b><span class="sep" aria-hidden="true">·</span><span>Product, design and build</span></p>
       </div>
+      <div class="shot"><img src="images/noa/hero.jpg" alt="" loading="lazy"></div>
+    </header>
 
-      <h3><span class="n">01</span>Natural language as the primary interface</h3>
-      <p>Users input tasks, events, or lists in plain language: "Add dentist next Tuesday at 3pm for family", "Pick up milk and bananas", "Remind me Phoebe has non-uniform day Friday". The system parses intent, extracts key details (date, time, person, context), and assigns or categorises automatically. No manual setup, no rigid input flows, no cognitive friction. The same works outside the app: message Noa on WhatsApp and it lands on the right list, or use Ask Noa to change things in plain language ("move my late tasks").</p>
-      <div class="shot wide filled"><img src="images/noa/natural-language.jpg" alt="WhatsApp capture and natural language task entry"></div>
+    
 
-      <h3><span class="n">02</span>Unifying tasks, calendar, and lists</h3>
-      <p>Instead of separate tools, Noa treats everything as part of one shared system: tasks can become events, notes can become actionable items, lists can be shared and assigned. The design focus: avoid duplication, maintain flexibility without complexity, keep the system understandable at a glance.</p>
-
-      <h3><span class="n">03</span>Shared context for families &amp; couples</h3>
-      <p>Designed for multiple users from the start: assign tasks to specific people, shared visibility across the household, clear ownership of responsibilities. The key goal: reduce reliance on one person holding everything.</p>
-      <div class="shot wide filled"><img src="images/noa/shared-household.jpg" alt="Shared family calendar and task ownership"></div>
-
-      <h3><span class="n">04</span>AI in the product and in the build</h3>
-      <p>AI isn't just a feature; it's how the product was made. In-product: natural language parsing, smart categorisation and structuring. In development: rapid prototyping with Claude and Cursor, iterating on flows quickly without over-specifying in Figma, and exploring agent-led workflows for faster UI iteration.</p>
-
-      <h3><span class="n">05</span>Designing for real behaviour</h3>
-      <p>Quick capture over structured input. Shared accountability over personal organisation. Low friction over feature depth. One-tap capture flows, minimal required input, and defaults that just work. Onboarding takes about 90 seconds and every step can be skipped.</p>
-      <div class="shot wide filled"><img src="images/noa/quick-setup.jpg" alt="Onboarding in about 90 seconds"></div>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Outcome</h2>
     <div class="cs-body">
-      <ul>
-        <li><b>Designed, built, and shipped an end-to-end consumer product</b> from concept to the App Store</li>
-        <li><b>Live on the App Store with over 200 users</b> actively using the app and providing feedback</li>
-        <li><b>Redesigned end to end</b> since launch, across every screen</li>
-        <li><b>Validated demand</b> around shared coordination, natural language input, and reducing mental load in households</li>
-        <li><b>Established a flexible foundation</b> for personal use, couples, and family plans</li>
-      </ul>
-    </div>
-  </div>
+      <article class="article">
+        <section id="problem"><span class="section-label">The problem</span><h2 class="title">Managing everyday life is fragmented and mentally taxing</h2><div class="problems"><div class="problem"><span>01</span><p><b>Information is spread</b> across calendars, notes, messages, and mental load, usually held by one person</p></div><div class="problem"><span>02</span><p><b>Coordination between partners or families</b> is inconsistent</p></div><div class="problem"><span>03</span><p><b>Existing tools are either too simple</b> (notes apps) <b>or too complex</b> (Notion-style systems)</p></div><div class="problem"><span>04</span><p><b>Creating structure requires effort</b> before any value is realised</p></div></div><p class="result"><span>THE RESULT</span>missed events ("you didn't tell me?"), uneven mental load across households, and constant low-level friction.</p></section><section id="the-approach"><span class="section-label">The approach</span><div class="measure"><div class="note"><span class="section-label">Core principle</span><p>Let users think naturally, and let the system handle structure.</p></div></div></section><section id="the-approach-01"><div class="measure"><span class="section-label">01 · Approach</span><h2 class="title">Natural language as the primary interface</h2></div><div class="measure"><p class="long soft">Users input tasks, events, or lists in plain language: "Add dentist next Tuesday at 3pm for family", "Pick up milk and bananas", "Remind me Phoebe has non-uniform day Friday". The system parses intent, extracts key details (date, time, person, context), and assigns or categorises automatically. No manual setup, no rigid input flows, no cognitive friction. The same works outside the app: message Noa on WhatsApp and it lands on the right list, or use Ask Noa to change things in plain language ("move my late tasks").</p></div><div class="shot"><img src="images/noa/natural-language.jpg" alt="" loading="lazy"></div></section><section id="the-approach-02"><div class="measure"><span class="section-label">02 · Approach</span><h2 class="title">Unifying tasks, calendar, and lists</h2></div><div class="measure"><p class="long soft">Instead of separate tools, Noa treats everything as part of one shared system: tasks can become events, notes can become actionable items, lists can be shared and assigned. The design focus: avoid duplication, maintain flexibility without complexity, keep the system understandable at a glance.</p></div></section><section id="the-approach-03"><div class="measure"><span class="section-label">03 · Approach</span><h2 class="title">Shared context for families &amp; couples</h2></div><div class="measure"><p class="long soft">Designed for multiple users from the start: assign tasks to specific people, shared visibility across the household, clear ownership of responsibilities. The key goal: reduce reliance on one person holding everything.</p></div><div class="shot"><img src="images/noa/shared-household.jpg" alt="" loading="lazy"></div></section><section id="the-approach-04"><div class="measure"><span class="section-label">04 · Approach</span><h2 class="title">AI in the product and in the build</h2></div><div class="measure"><p class="long soft">AI isn't just a feature; it's how the product was made. In-product: natural language parsing, smart categorisation and structuring. In development: rapid prototyping with Claude and Cursor, iterating on flows quickly without over-specifying in Figma, and exploring agent-led workflows for faster UI iteration.</p></div></section><section id="the-approach-05"><div class="measure"><span class="section-label">05 · Approach</span><h2 class="title">Designing for real behaviour</h2></div><div class="measure"><p class="long soft">Quick capture over structured input. Shared accountability over personal organisation. Low friction over feature depth. One-tap capture flows, minimal required input, and defaults that just work. Onboarding takes about 90 seconds and every step can be skipped.</p></div><div class="shot"><img src="images/noa/quick-setup.jpg" alt="" loading="lazy"></div></section><section id="outcome"><div class="outcome"><span class="section-label">Outcome</span><ul class="outs"><li>Designed, built, and shipped an end-to-end consumer product from concept to the App Store</li><li>Live on the App Store with over 200 users actively using the app and providing feedback</li><li>Redesigned end to end since launch, across every screen</li><li>Validated demand around shared coordination, natural language input, and reducing mental load in households</li><li>Established a flexible foundation for personal use, couples, and family plans</li></ul></div></section><section id="learned"><span class="section-label">What I learned</span><ol class="learn"><li><span>01</span>The biggest problem isn't organisation, it's coordination</li><li><span>02</span>Natural language dramatically lowers the barrier to entry</li><li><span>03</span>Shared systems only work when ownership is visible and balanced</li><li><span>04</span>Speed of iteration is critical when defining new interaction models</li><li><span>05</span>AI is most valuable when it removes friction, not adds complexity</li></ol></section>
+        <a class="next" href="case-study-venuescanner-dashboard.html" style="background:var(--surface)"><div class="lead"><div class="label"><span>Next project · VenueScanner Dashboard</span></div><h2 class="title">VenueScanner Dashboard</h2><p class="caption">One place for hosts to run bookings and enquiries</p></div><span class="go-lg" aria-hidden="true">→</span></a>
+      </article>
 
-  <div class="cs-block">
-    <h2 class="cs-label">Learnings</h2>
-    <div class="cs-body">
-      <ul>
-        <li>The biggest problem isn't organisation, it's coordination</li>
-        <li>Natural language dramatically lowers the barrier to entry</li>
-        <li>Shared systems only work when ownership is visible and balanced</li>
-        <li>Speed of iteration is critical when defining new interaction models</li>
-        <li>AI is most valuable when it removes friction, not adds complexity</li>
-      </ul>
+      <aside class="rail">
+        <nav class="rail-box toc" aria-label="On this page">
+          <span class="section-label">On this page</span>
+          <a href="#problem">The problem</a><a href="#the-approach">The approach</a><a href="#the-approach-01">01 · Natural language as the primary interface</a><a href="#the-approach-02">02 · Unifying tasks, calendar, and lists</a><a href="#the-approach-03">03 · Shared context for families &amp; couples</a><a href="#the-approach-04">04 · AI in the product and in the build</a><a href="#the-approach-05">05 · Designing for real behaviour</a><a href="#outcome">Outcome</a><a href="#learned">What I learned</a>
+        </nav>
+        <div class="rail-box">
+          <span class="section-label">Details</span>
+          <dl><div class="kv"><dt>Role</dt><dd>Designer &amp; builder</dd></div><div class="kv"><dt>Service</dt><dd>Product design<br>AI-assisted build</dd></div><div class="kv"><dt>Stack</dt><dd>Figma · Claude · Cursor</dd></div><div class="kv"><dt>Status</dt><dd>Live on the App Store<br>200+ users</dd></div></dl>
+        </div>
+      </aside>
     </div>
-  </div>
-</section>
 
-<div class="next wrap">
-  <a href="case-study-venuescanner-dashboard.html">
-    <div class="n-label">Next project · 06</div>
-    <div class="n-title">VenueScanner <em>Dashboard</em> →</div>
-  </a>
+    <footer class="foot" style="margin-top:0">
+      <span>Want the full story? <a href="sam-harris-cv.pdf" target="_blank" rel="noopener">Download my CV</a></span>
+      <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    </footer>
+  </main>
 </div>
 
-</main>
+<nav class="tabs" aria-label="Main"><a href="index.html">Home</a><a class="on" href="work.html" aria-current="page">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="toast" role="status" aria-live="polite"></div>
 
-<footer>
-  <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris · Designed and built by me</span>
-    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
-  </div>
-</footer>
+<script>
+  const toast=document.querySelector('.toast'); let tm;
+  document.querySelectorAll('[data-soon]').forEach(el=>el.addEventListener('click',e=>{
+    e.preventDefault(); toast.textContent=el.dataset.soon+' screen comes next'; toast.classList.add('show');
+    clearTimeout(tm); tm=setTimeout(()=>toast.classList.remove('show'),1800);
+  }));
 
-<script src="lightbox.js?v=2026-10-25"></script>
+  const links=[...document.querySelectorAll('.toc a')];
+  const mark=id=>links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+id));
+  const sections=[...document.querySelectorAll('.article section[id]')];
+  const spy=()=>{ let cur=sections[0]; sections.forEach(s=>{ if(s.getBoundingClientRect().top<=innerHeight*.3) cur=s }); mark(cur.id) };
+  addEventListener('scroll',spy,{passive:true}); spy();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

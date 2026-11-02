@@ -4,121 +4,91 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VenueScanner Booking | Sam Harris</title>
+<meta name="description" content="Redesigning the &#x27;Mark as Booked&#x27; feature to increase host utilisation: more visible, more usable, more used.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css?v=2026-10-25b">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav aria-label="Main">
-  <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
-    <div class="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+<div class="app">
+  <aside class="side" aria-label="Main">
+    <div class="side-top">
+      <a class="logo" href="index.html">Sam Harris<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="on" href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
-  </div>
-</nav>
+    <span class="status"><i aria-hidden="true"></i>Open to new roles</span>
+  </aside>
 
-<div class="mobile-nav" id="mobile-nav">
-    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
-    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
-    <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+  <main class="main cs">
+    <div class="topbar"><a class="logo" href="index.html">Sam Harris<span>.</span></a><span class="status"><i aria-hidden="true"></i>Open to roles</span></div>
+
+    <div class="cs-top">
+      <div class="crumb"><a href="work.html">Work</a><i> / </i>Booking</div>
+      <nav class="pager" aria-label="Other projects">
+        <a href="case-study-venuescanner-dashboard.html">← VenueScanner Dashboard</a>
+        <a class="fwd" href="case-study-hinterview-insights.html">Hinterview Insights →</a>
+      </nav>
+    </div>
+
+    <header class="cs-hero" style="background:var(--surface)">
+      <div class="cs-hero-copy">
+        <div class="eyebrow" style="color:var(--ink)">VenueScanner · Booking · 2024</div>
+        <h1>Maximising conversions with improved user experience</h1>
+        <p class="intro" style="color:var(--ink)">Redesigning the 'Mark as Booked' feature to increase host utilisation: more visible, more usable, more used.</p>
+        <p class="live"><b class="shipped">Shipped 2024</b><span class="sep" aria-hidden="true">·</span><span>Design</span></p>
+      </div>
+      <div class="shot"><img src="https://framerusercontent.com/images/nChhv8QdMsWFl5QtWJQBzVKL0.png" alt="" loading="lazy"></div>
+    </header>
+
+    
+
+    <div class="cs-body">
+      <article class="article">
+        <section id="background"><div class="measure"><span class="section-label">Background</span></div><div class="measure"><p class="long">In 2024, I redesigned the 'Mark as Booked' feature for VenueScanner with the goal of increasing host utilisation. The project focused on making the feature more visible and user-friendly, encouraging more hosts to mark their spaces as booked.</p><div class="note"><span class="section-label">The constraint</span><p>No user research. A commercial decision had been made to improve this feature; I was asked to ideate, design, and ship the product for testing in a live environment.</p></div></div></section><section id="business-goals"><div class="measure"><span class="section-label">Business goals</span></div><div class="measure"><ul class="points"><li>Increase the use of the 'Mark as Booked' feature</li><li>Improve overall booking efficiency</li><li>Enhance user satisfaction to drive repeat use</li></ul></div></section><section id="the-approach-01"><div class="measure"><span class="section-label">01 · Approach</span><h2 class="title">Usability review</h2></div><div class="measure"><p class="long soft">Evaluating the platform surfaced several key issues: the booking process included redundant steps (making step two editable removed the need for step one entirely); tooltips sat too close to CTAs, causing confusion; and the 'Mark as Booked' action lacked prominence; it needed to become the primary action after sending a quote, with immediate feedback to keep users engaged.</p><ul class="points"><li><b>Streamlined steps:</b> removed redundancy in the booking flow</li><li><b>Separated tooltips from CTAs</b>, positioning actions closer to event details</li><li><b>Promoted 'Mark as Booked'</b> to the primary post-quote action with immediate feedback</li><li><b>Aligned palette and tone of voice</b> with the brand's primary colours and clear, specific instructions</li></ul></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/HawWqklkPCnmKPkAZvOg2KHI4.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/u8x1KTzkMExuUoWWqgj6XtCDXI.png" alt="" loading="lazy"></div></div></section><section id="the-approach-02"><div class="measure"><span class="section-label">02 · Approach</span><h2 class="title">User flows</h2></div><div class="measure"><p class="long soft">Mapped the existing experience, then redesigned the flow around the idea that best fit business and user goals.</p></div></section><section id="the-approach-03"><div class="measure"><span class="section-label">03 · Approach</span><h2 class="title">Design</h2></div><div class="measure"><p class="long soft">A clean, intuitive UI aligned with VenueScanner's brand: key actions emphasised with primary brand colours, and the user flow streamlined to reduce clicks. The final UI features a prominent 'Mark as Booked' button, an efficient booking process, and 'wow' moments to delight users and promote repeat behaviour and stickiness.</p></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/hrrDRpmXhzQby71lTgufjcRQQq4.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/tWYu5j3wVSsnrsXKn08o9HgKzg4.png" alt="" loading="lazy"></div></div><div class="shot"><img src="https://framerusercontent.com/images/W38XPBqmBsL0GYEn0K9MQuQug.png" alt="" loading="lazy"></div></section>
+        <a class="next" href="case-study-hinterview-insights.html" style="background:var(--surface)"><div class="lead"><div class="label"><span>Next project · Hinterview Insights</span></div><h2 class="title">Hinterview Insights</h2><p class="caption">A dashboard for thousands of recruiters</p></div><span class="go-lg" aria-hidden="true">→</span></a>
+      </article>
+
+      <aside class="rail">
+        <nav class="rail-box toc" aria-label="On this page">
+          <span class="section-label">On this page</span>
+          <a href="#background">Background</a><a href="#business-goals">Business goals</a><a href="#the-approach-01">01 · Usability review</a><a href="#the-approach-02">02 · User flows</a><a href="#the-approach-03">03 · Design</a>
+        </nav>
+        <div class="rail-box">
+          <span class="section-label">Details</span>
+          <dl><div class="kv"><dt>Role</dt><dd>Sole UX/UI Designer</dd></div><div class="kv"><dt>Service</dt><dd>Product design</dd></div><div class="kv"><dt>Constraint</dt><dd>No user research:<br>ship &amp; test live</dd></div><div class="kv"><dt>Year</dt><dd>2024</dd></div></dl>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="foot" style="margin-top:0">
+      <span>Want the full story? <a href="sam-harris-cv.pdf" target="_blank" rel="noopener">Download my CV</a></span>
+      <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    </footer>
+  </main>
 </div>
 
-<main id="main">
-<header>
-  <div class="wrap">
-    <p class="eyebrow">VenueScanner <span aria-hidden="true">×</span> 2024 <span aria-hidden="true">×</span> case study</p>
-    <h1>Maximising conversions with improved <em>user experience</em></h1>
-    <p class="hero-sub">Redesigning the 'Mark as Booked' feature to increase host utilisation: more visible, more usable, more used.</p>
-    <div class="meta-grid">
-      <div><b>ROLE</b>Sole UX/UI Designer</div>
-      <div><b>SERVICE</b>Product design</div>
-      <div><b>CONSTRAINT</b>No user research:<br>ship &amp; test live</div>
-      <div><b>YEAR</b>2024</div>
-    </div>
-    <div class="shot tall hero-shot filled"><img src="https://framerusercontent.com/images/nChhv8QdMsWFl5QtWJQBzVKL0.png" alt="Mark as Booked"></div>
-  </div>
-</header>
+<nav class="tabs" aria-label="Main"><a href="index.html">Home</a><a class="on" href="work.html" aria-current="page">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="toast" role="status" aria-live="polite"></div>
 
-<section class="cs wrap">
+<script>
+  const toast=document.querySelector('.toast'); let tm;
+  document.querySelectorAll('[data-soon]').forEach(el=>el.addEventListener('click',e=>{
+    e.preventDefault(); toast.textContent=el.dataset.soon+' screen comes next'; toast.classList.add('show');
+    clearTimeout(tm); tm=setTimeout(()=>toast.classList.remove('show'),1800);
+  }));
 
-  <div class="cs-block">
-    <h2 class="cs-label">Background</h2>
-    <div class="cs-body">
-      <p>In 2024, I redesigned the 'Mark as Booked' feature for VenueScanner with the goal of increasing host utilisation. The project focused on making the feature more visible and user-friendly, encouraging more hosts to mark their spaces as booked.</p>
-      <div class="callout">
-        <div class="c-label">The constraint</div>
-        <p>No user research. A commercial decision had been made to improve this feature; I was asked to ideate, design, and ship the product for testing in a live environment.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Business goals</h2>
-    <div class="cs-body">
-      <ul>
-        <li>Increase the use of the 'Mark as Booked' feature</li>
-        <li>Improve overall booking efficiency</li>
-        <li>Enhance user satisfaction to drive repeat use</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The approach</h2>
-    <div class="cs-body">
-      <h3><span class="n">01</span>Usability review</h3>
-      <p>Evaluating the platform surfaced several key issues: the booking process included redundant steps (making step two editable removed the need for step one entirely); tooltips sat too close to CTAs, causing confusion; and the 'Mark as Booked' action lacked prominence; it needed to become the primary action after sending a quote, with immediate feedback to keep users engaged.</p>
-      <ul>
-        <li><b>Streamlined steps:</b> removed redundancy in the booking flow</li>
-        <li><b>Separated tooltips from CTAs</b>, positioning actions closer to event details</li>
-        <li><b>Promoted 'Mark as Booked'</b> to the primary post-quote action with immediate feedback</li>
-        <li><b>Aligned palette and tone of voice</b> with the brand's primary colours and clear, specific instructions</li>
-      </ul>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/HawWqklkPCnmKPkAZvOg2KHI4.png" alt="Usability findings"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/u8x1KTzkMExuUoWWqgj6XtCDXI.png" alt="Streamlined steps"></div>
-      </div>
-
-      <h3><span class="n">02</span>User flows</h3>
-      <p>Mapped the existing experience, then redesigned the flow around the idea that best fit business and user goals.</p>
-
-      <h3><span class="n">03</span>Design</h3>
-      <p>A clean, intuitive UI aligned with VenueScanner's brand: key actions emphasised with primary brand colours, and the user flow streamlined to reduce clicks. The final UI features a prominent 'Mark as Booked' button, an efficient booking process, and 'wow' moments to delight users and promote repeat behaviour and stickiness.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/hrrDRpmXhzQby71lTgufjcRQQq4.png" alt="Booking flow"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/tWYu5j3wVSsnrsXKn08o9HgKzg4.png" alt="Booked confirmation"></div>
-      </div>
-      <div class="shot mid filled"><img src="https://framerusercontent.com/images/W38XPBqmBsL0GYEn0K9MQuQug.png" alt="Wow moment"></div>
-    </div>
-  </div>
-</section>
-
-<div class="next wrap">
-  <a href="case-study-notifications.html">
-    <div class="n-label">Back to the start · 01</div>
-    <div class="n-title">Kato <em>Notifications</em> →</div>
-  </a>
-</div>
-
-</main>
-
-<footer>
-  <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris · Designed and built by me</span>
-    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
-  </div>
-</footer>
-
-<script src="lightbox.js?v=2026-10-25"></script>
+  const links=[...document.querySelectorAll('.toc a')];
+  const mark=id=>links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+id));
+  const sections=[...document.querySelectorAll('.article section[id]')];
+  const spy=()=>{ let cur=sections[0]; sections.forEach(s=>{ if(s.getBoundingClientRect().top<=innerHeight*.3) cur=s }); mark(cur.id) };
+  addEventListener('scroll',spy,{passive:true}); spy();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

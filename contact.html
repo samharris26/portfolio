@@ -4,170 +4,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Sam Harris</title>
+<meta name="description" content="Get in touch with Sam Harris about a role, a project or a question.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0A0F1C;
-    --surface:#111827;
-    --ink:#EEF2F8;
-    --body:#CBD3E0;
-    --muted:#98A2B4;
-    --line:rgba(238,242,248,.12);
-    --field-line:rgba(238,242,248,.38);
-    --accent:#4CB0FF;
-    --accent-text:#6CBEFF;
-    --sans:'Inter','Helvetica Neue',Arial,sans-serif;
-    color-scheme:dark;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
-  ::selection{background:var(--accent);color:#fff}
-  a{color:inherit}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;width:100%}
-  :focus-visible{outline:2px solid var(--accent-text);outline-offset:3px;border-radius:2px}
-  .skip{position:absolute;left:-9999px;top:12px;background:var(--ink);color:var(--bg);padding:10px 16px;font-size:15px;font-weight:500;text-decoration:none;z-index:20}
-  .skip:focus{left:12px}
-  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-  @media (prefers-reduced-motion:reduce){*{transition:none !important}}
-
-  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav-inner{display:flex;justify-content:space-between;align-items:center;height:64px}
-  .wordmark{font-weight:500;font-size:16px;text-decoration:none}
-  .wordmark b{color:var(--accent-text);font-weight:500}
-  .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{font-size:15px;color:var(--muted);text-decoration:none;transition:color .2s}
-  .nav-links a:hover,.nav-links a.active{color:var(--ink)}
-  .status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:6px 12px}
-  .dot{width:7px;height:7px;border-radius:50%;background:#22C55E}
-
-  main{flex:1;padding:120px 0 128px}
-  .kicker{font-size:15px;color:var(--muted);margin-bottom:28px}
-  h1{font-weight:200;font-size:clamp(44px,6.4vw,88px);line-height:1.06;letter-spacing:-.025em}
-  h1 em{font-style:normal;font-weight:400;color:var(--accent)}
-  .lede{margin-top:32px;font-size:20px;line-height:1.6;color:var(--muted);max-width:50ch}
-
-  .block{padding-top:128px}
-  .head{margin-bottom:40px}
-  .head h2{font-weight:300;font-size:clamp(30px,3.2vw,40px);letter-spacing:-.02em;line-height:1.15}
-  .grid{display:grid;grid-template-columns:4fr 8fr;gap:64px}
-  .grid .note{font-size:17px;color:var(--muted);max-width:30ch}
-
-  .direct{list-style:none;display:flex;flex-direction:column;gap:16px}
-  .direct li{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:baseline}
-  .direct li span{font-size:15px;color:var(--muted)}
-  .direct a{color:var(--accent-text);text-decoration:none;font-size:17px}
-  .direct a:hover{text-decoration:underline}
-
-  .cform{display:flex;flex-direction:column;gap:20px;max-width:680px}
-  .frow{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .cform label{display:flex;flex-direction:column;gap:8px;font-size:15px;font-weight:500;color:var(--ink)}
-  .cform input,.cform textarea{font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--surface);border:1px solid var(--field-line);border-radius:10px;padding:13px 14px;outline:none;transition:border-color .2s;resize:vertical}
-  .cform input:focus,.cform textarea:focus{border-color:var(--accent)}
-  .cform input::placeholder,.cform textarea::placeholder{color:var(--muted)}
-  .cform button{align-self:flex-start;font-family:var(--sans);font-size:15px;font-weight:600;color:var(--bg);background:var(--accent);border:none;border-radius:99px;padding:14px 26px;cursor:pointer;transition:background .2s}
-  .cform button:hover{background:var(--accent-text)}
-  .cform button:disabled{opacity:.6;cursor:default}
-  .form-error{font-size:15px;color:#FF8A80;display:none}
-  .sent{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 28px}
-  .sent .s1{font-weight:500;color:var(--accent-text)}
-  .sent .s2{color:var(--body);margin-top:4px}
-
-  footer .bar{border-top:1px solid var(--line);padding:28px 0 44px;font-size:14px;color:var(--muted);display:flex;justify-content:space-between}
-
-  @media(max-width:900px){
-    .wrap{padding:0 20px}
-    main{padding:72px 0 88px}
-    .lede{font-size:18px}
-    .block{padding-top:88px}
-    .grid{grid-template-columns:1fr;gap:28px}
-    .frow{grid-template-columns:1fr}
-    .direct li{grid-template-columns:90px 1fr}
-    .nav-links a{display:none}
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav aria-label="Main">
-  <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
-    <div class="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a class="active" href="contact.html" aria-current="page">Contact</a>
-      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+<div class="app">
+  <aside class="side" aria-label="Main">
+    <div class="side-top">
+      <a class="logo" href="index.html">Sam Harris<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a class="on" href="contact.html" aria-current="page">Contact</a>
+      </nav>
     </div>
-  </div>
-</nav>
+    <span class="status"><i aria-hidden="true"></i>Open to new roles</span>
+  </aside>
 
-<main id="main"><div class="wrap">
-  <p class="kicker">Contact</p>
-  <h1>Got a complex problem?<br><em>Say hello.</em></h1>
-  <p class="lede">I'm a product designer at Kato, also working as a PM, and looking for my next design role. Whether it's a role, a project or a question about something on here, I'm happy to talk.</p>
+  <main class="main">
+    <div class="topbar"><a class="logo" href="index.html">Sam Harris<span>.</span></a><span class="status"><i aria-hidden="true"></i>Open to roles</span></div>
 
-  <section class="block" aria-labelledby="h-direct">
-    <div class="head"><h2 id="h-direct">Get in touch directly</h2></div>
-    <div class="grid">
-      <p class="note">Email is quickest. My CV is a single page PDF.</p>
-      <ul class="direct">
-        <li><span>Email</span><a href="mailto:samharris26@gmail.com">samharris26@gmail.com</a></li>
-        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sam-harris-33016090/" target="_blank" rel="noopener">sam-harris<span class="sr"> (opens in a new tab)</span></a></li>
-        <li><span>CV</span><a href="/sam-harris-cv.pdf" target="_blank" rel="noopener">Download PDF<span class="sr"> (opens in a new tab)</span></a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="block" aria-labelledby="h-form">
-    <div class="head"><h2 id="h-form">Send a message</h2></div>
-    <div class="grid">
-      <p class="note">It comes straight to my inbox and I'll reply by email.</p>
-      <div aria-live="polite">
-      <form class="cform" action="https://formspree.io/f/mdarjnvj" method="POST">
-        <div class="frow">
-          <label>Name<input type="text" name="name" required autocomplete="name" placeholder="Your name"></label>
-          <label>Email<input type="email" name="email" required autocomplete="email" placeholder="you@company.com"></label>
-        </div>
-        <label>Message<textarea name="message" rows="6" required placeholder="What are you working on?"></textarea></label>
-        <button type="submit">Send message</button>
-        <p class="form-error" role="alert">Something went wrong. Try again, or email me directly.</p>
-      </form>
+    <header class="head">
+      <div class="head-copy">
+        <div class="eyebrow">Contact</div>
+        <h1>Got a complex problem? Say hello.</h1>
+        <p class="intro">I'm a product designer at Kato, also working as a PM, and looking for my next product role. Whether it's a role, a project or a question about something on here, I'm happy to talk.</p>
       </div>
-    </div>
-  </section>
-</div></main>
+    </header>
 
-<footer><div class="wrap"><div class="bar"><span>© 2026 Sam Harris</span><span>Designed and built by me</span></div></div></footer>
+    <section class="contact-grid" aria-label="Get in touch">
+      <div class="channels">
+        <a class="card notif" href="mailto:samharris26@gmail.com">
+          <div class="label"><span>Quickest</span><span class="go" aria-hidden="true">↗</span></div>
+          <div class="lead"><h2 class="title">Email</h2><p class="caption">samharris26@gmail.com</p></div>
+        </a>
+        <a class="card payments" href="https://www.linkedin.com/in/sam-harris-33016090/" target="_blank" rel="noopener">
+          <div class="label"><span>Connect</span><span class="go" aria-hidden="true">↗</span></div>
+          <div class="lead"><h2 class="title">LinkedIn</h2><p class="caption">sam-harris</p></div>
+        </a>
+        <a class="card billing" href="sam-harris-cv.pdf" target="_blank" rel="noopener">
+          <div class="label"><span>One page</span><span class="go" aria-hidden="true">↓</span></div>
+          <div class="lead"><h2 class="title">CV</h2><p class="caption">Download the PDF</p></div>
+        </a>
+      </div>
+
+      <div class="card white">
+        <div class="label"><span>Send a message</span></div>
+        <div class="lead">
+          <h2 class="title">Straight to my inbox</h2>
+          <p class="caption" style="color:var(--text-2)">I'll reply by email.</p>
+        </div>
+        <form class="form" action="https://formspree.io/f/mdarjnvj" method="POST">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" required autocomplete="name" placeholder="Your name"></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" required autocomplete="email" placeholder="you@company.com"></div>
+          <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="6" required placeholder="What are you working on?"></textarea></div>
+          <button class="btn primary" type="submit">Send message</button>
+          <p class="form-error" role="alert" hidden>Something went wrong. Try again, or email me directly.</p>
+        </form>
+      </div>
+    </section>
+    <footer class="foot" style="margin-top:0">
+      <span>Want the full story? <a href="sam-harris-cv.pdf" target="_blank" rel="noopener">Download my CV</a></span>
+      <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    </footer>
+  </main>
+</div>
+
+<nav class="tabs" aria-label="Main"><a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a><a class="on" href="contact.html" aria-current="page">Contact</a></nav>
+<div class="toast" role="status" aria-live="polite"></div>
 
 <script>
-  // ajax form submit keeps the visitor on the page
-  const form = document.querySelector('.cform');
-  form.addEventListener('submit', async function(e){
+  const toast=document.querySelector('.toast'); let tm;
+  const say=t=>{toast.textContent=t; toast.classList.add('show'); clearTimeout(tm); tm=setTimeout(()=>toast.classList.remove('show'),1800)};
+  document.querySelectorAll('[data-soon]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault(); say(el.dataset.soon+' screen comes next')}));
+</script>
+<script>
+  const form=document.querySelector('.form'); const err=form.querySelector('.form-error');
+  form.addEventListener('submit',async e=>{
     e.preventDefault();
-    const btn = form.querySelector('button');
-    const err = form.querySelector('.form-error');
-    err.style.display = 'none';
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        form.outerHTML = '<div class="sent"><p class="s1">Message sent</p><p class="s2">Thanks, I\'ll get back to you soon.</p></div>';
-      } else { throw new Error(); }
-    } catch (_) {
-      btn.disabled = false;
-      btn.textContent = 'Send message';
-      err.style.display = 'block';
-    }
+    if(!form.reportValidity()) return;
+    const btn=form.querySelector('button'); err.hidden=true; btn.disabled=true; btn.textContent='Sending…';
+    try{
+      const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+      if(!res.ok) throw new Error();
+      form.outerHTML='<div class="sent"><h3 class="title">Message sent</h3><p class="caption">Thanks, I\'ll get back to you soon.</p></div>';
+    }catch(_){ btn.disabled=false; btn.textContent='Send message'; err.hidden=false; }
   });
 </script>
-
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

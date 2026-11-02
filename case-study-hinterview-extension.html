@@ -3,137 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hinterview Chrome Extension | Sam Harris</title>
+<title>Hinterview Chrome extension | Sam Harris</title>
+<meta name="description" content="A Chrome extension that lets recruiters capture and share candidate video interviews directly from their browser. No tab-juggling.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css?v=2026-10-25b">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav aria-label="Main">
-  <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
-    <div class="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+<div class="app">
+  <aside class="side" aria-label="Main">
+    <div class="side-top">
+      <a class="logo" href="index.html">Sam Harris<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="on" href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
-  </div>
-</nav>
+    <span class="status"><i aria-hidden="true"></i>Open to new roles</span>
+  </aside>
 
-<div class="mobile-nav" id="mobile-nav">
-    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
-    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
-    <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+  <main class="main cs">
+    <div class="topbar"><a class="logo" href="index.html">Sam Harris<span>.</span></a><span class="status"><i aria-hidden="true"></i>Open to roles</span></div>
+
+    <div class="cs-top">
+      <div class="crumb"><a href="work.html">Work</a><i> / </i>Chrome extension</div>
+      <nav class="pager" aria-label="Other projects">
+        <a href="case-study-hinterview-insights.html">← Hinterview Insights</a>
+        <a class="fwd" href="case-study-notifications.html">Notifications →</a>
+      </nav>
+    </div>
+
+    <header class="cs-hero" style="background:var(--surface)">
+      <div class="cs-hero-copy">
+        <div class="eyebrow" style="color:var(--ink)">Hinterview · Chrome extension</div>
+        <h1>Reduced user friction with a streamlined recording process</h1>
+        <p class="intro" style="color:var(--ink)">A Chrome extension that lets recruiters capture and share candidate video interviews directly from their browser. No tab-juggling.</p>
+        <p class="live"><b class="shipped">Shipped</b><span class="sep" aria-hidden="true">·</span><span>Design</span></p>
+      </div>
+      <div class="shot"><img src="https://framerusercontent.com/images/O9qCE7upiQIN6bAcBaF5QPk7JQ.png" alt="" loading="lazy"></div>
+    </header>
+
+    
+
+    <div class="cs-body">
+      <article class="article">
+        <section id="background"><div class="measure"><span class="section-label">Background</span></div><div class="measure"><p class="long">The Hinterview Chrome Extension project aimed to enhance the recruitment process with an integrated tool for recruiters, streamlining the workflow so they can seamlessly capture and share candidate video interviews directly from the browser. The goal: improve user experience, increase productivity, and deliver a more efficient hiring process.</p></div></section><section id="challenges"><div class="measure"><span class="section-label">Challenges</span></div><div class="measure"><ul class="points"><li><b>An intuitive interface</b> for capturing and sharing video interviews</li><li><b>Seamless integration</b> with the existing recruitment platform</li><li><b>Easy for recruiters of all technical skill levels</b></li></ul></div></section><section id="business-goals"><div class="measure"><span class="section-label">Business goals</span></div><div class="measure"><ul class="points"><li>Increase the use of video interviews in the recruitment process</li><li>Improve overall workflow efficiency</li><li>Enhance recruiter satisfaction to drive repeat use</li></ul></div></section><section id="the-approach-01"><div class="measure"><span class="section-label">01 · Approach</span><h2 class="title">Usability review</h2></div><div class="measure"><p class="long soft">Designing 'Record a Hintro' from the ground up meant getting the fundamentals right: video capture and sharing integrated directly into the browser (avoiding the inefficiency of multiple tabs), a clear and accessible extension that recruiters could navigate with ease, and strategic placement of key actions to minimise clicks.</p></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/4pjLSQgTiMx6zPb7bO4wzjnVqs0.jpeg" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/H1fEvrtOpdTx4LRmab4cpcyTFY.jpeg" alt="" loading="lazy"></div></div></section><section id="the-approach-02"><div class="measure"><span class="section-label">02 · Approach</span><h2 class="title">User flows</h2></div><div class="measure"><p class="long soft">Mapped the existing experience, then redesigned the flow around the idea that best fit business and user goals.</p></div></section><section id="the-approach-03"><div class="measure"><span class="section-label">03 · Approach</span><h2 class="title">Design</h2></div><div class="measure"><p class="long soft">The final UI features a prominent, intuitive interface for capturing and sharing video interviews, an efficient workflow, and positive feedback that reinforces engagement. Consistent visual design and tone of voice align with Hinterview's branding.</p><div class="note"><span class="section-label">Validated with users</span><p>The final UI was user tested; feedback showed a significant improvement in satisfaction and productivity, with recruiters saving an average of 30 seconds per video recorded.</p></div></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/44cYXXRGeIvFk91sDB6DoPn8Ao.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/Dq16sDH5cqQ0EZ8jvWfCHlvg17k.jpeg" alt="" loading="lazy"></div></div></section><section id="next-steps"><div class="measure"><span class="section-label">Next steps</span></div><div class="measure"><ul class="points"><li>Monitor user interaction with the new feature</li><li>Gather feedback for continuous improvement</li><li>Explore additional features to further enhance the recruitment process</li></ul></div></section>
+        <a class="next" href="case-study-notifications.html" style="background:var(--blue)"><div class="lead"><div class="label"><span>Next project · Notifications</span></div><h2 class="title">One inbox for everything</h2><p class="caption">One inbox for everything that needs attention</p></div><span class="go-lg" aria-hidden="true">→</span></a>
+      </article>
+
+      <aside class="rail">
+        <nav class="rail-box toc" aria-label="On this page">
+          <span class="section-label">On this page</span>
+          <a href="#background">Background</a><a href="#challenges">Challenges</a><a href="#business-goals">Business goals</a><a href="#the-approach-01">01 · Usability review</a><a href="#the-approach-02">02 · User flows</a><a href="#the-approach-03">03 · Design</a><a href="#next-steps">Next steps</a>
+        </nav>
+        <div class="rail-box">
+          <span class="section-label">Details</span>
+          <dl><div class="kv"><dt>Role</dt><dd>Sole UX/UI Designer</dd></div><div class="kv"><dt>Service</dt><dd>Product design</dd></div><div class="kv"><dt>Impact</dt><dd>~30 seconds saved<br>per video recorded</dd></div><div class="kv"><dt>Platform</dt><dd>Chrome extension</dd></div></dl>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="foot" style="margin-top:0">
+      <span>Want the full story? <a href="sam-harris-cv.pdf" target="_blank" rel="noopener">Download my CV</a></span>
+      <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    </footer>
+  </main>
 </div>
 
-<main id="main">
-<header>
-  <div class="wrap">
-    <p class="eyebrow">Hinterview <span aria-hidden="true">×</span> case study</p>
-    <h1>Reduced user friction with a streamlined <em>recording process</em></h1>
-    <p class="hero-sub">A Chrome extension that lets recruiters capture and share candidate video interviews directly from their browser. No tab-juggling.</p>
-    <div class="meta-grid">
-      <div><b>ROLE</b>Sole UX/UI Designer</div>
-      <div><b>SERVICE</b>Product design</div>
-      <div><b>IMPACT</b>~30 seconds saved<br>per video recorded</div>
-      <div><b>PLATFORM</b>Chrome extension</div>
-    </div>
-    <div class="shot tall hero-shot filled"><img src="https://framerusercontent.com/images/O9qCE7upiQIN6bAcBaF5QPk7JQ.png" alt="Hinterview Chrome extension"></div>
-  </div>
-</header>
+<nav class="tabs" aria-label="Main"><a href="index.html">Home</a><a class="on" href="work.html" aria-current="page">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="toast" role="status" aria-live="polite"></div>
 
-<section class="cs wrap">
+<script>
+  const toast=document.querySelector('.toast'); let tm;
+  document.querySelectorAll('[data-soon]').forEach(el=>el.addEventListener('click',e=>{
+    e.preventDefault(); toast.textContent=el.dataset.soon+' screen comes next'; toast.classList.add('show');
+    clearTimeout(tm); tm=setTimeout(()=>toast.classList.remove('show'),1800);
+  }));
 
-  <div class="cs-block">
-    <h2 class="cs-label">Background</h2>
-    <div class="cs-body">
-      <p>The Hinterview Chrome Extension project aimed to enhance the recruitment process with an integrated tool for recruiters, streamlining the workflow so they can seamlessly capture and share candidate video interviews directly from the browser. The goal: improve user experience, increase productivity, and deliver a more efficient hiring process.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Challenges</h2>
-    <div class="cs-body">
-      <ul>
-        <li><b>An intuitive interface</b> for capturing and sharing video interviews</li>
-        <li><b>Seamless integration</b> with the existing recruitment platform</li>
-        <li><b>Easy for recruiters of all technical skill levels</b></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Business goals</h2>
-    <div class="cs-body">
-      <ul>
-        <li>Increase the use of video interviews in the recruitment process</li>
-        <li>Improve overall workflow efficiency</li>
-        <li>Enhance recruiter satisfaction to drive repeat use</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The approach</h2>
-    <div class="cs-body">
-      <h3><span class="n">01</span>Usability review</h3>
-      <p>Designing 'Record a Hintro' from the ground up meant getting the fundamentals right: video capture and sharing integrated directly into the browser (avoiding the inefficiency of multiple tabs), a clear and accessible extension that recruiters could navigate with ease, and strategic placement of key actions to minimise clicks.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/4pjLSQgTiMx6zPb7bO4wzjnVqs0.jpeg" alt="Extension UI"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/H1fEvrtOpdTx4LRmab4cpcyTFY.jpeg" alt="Recording flow"></div>
-      </div>
-
-      <h3><span class="n">02</span>User flows</h3>
-      <p>Mapped the existing experience, then redesigned the flow around the idea that best fit business and user goals.</p>
-
-      <h3><span class="n">03</span>Design</h3>
-      <p>The final UI features a prominent, intuitive interface for capturing and sharing video interviews, an efficient workflow, and positive feedback that reinforces engagement. Consistent visual design and tone of voice align with Hinterview's branding.</p>
-      <div class="callout">
-        <div class="c-label">Validated with users</div>
-        <p>The final UI was user tested; feedback showed a significant improvement in satisfaction and productivity, with recruiters saving an average of 30 seconds per video recorded.</p>
-      </div>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/44cYXXRGeIvFk91sDB6DoPn8Ao.png" alt="Share flow"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/Dq16sDH5cqQ0EZ8jvWfCHlvg17k.jpeg" alt="Hintro playback"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Next steps</h2>
-    <div class="cs-body">
-      <ul>
-        <li>Monitor user interaction with the new feature</li>
-        <li>Gather feedback for continuous improvement</li>
-        <li>Explore additional features to further enhance the recruitment process</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="next wrap">
-  <a href="case-study-hinterview-insights.html">
-    <div class="n-label">Next project · 08</div>
-    <div class="n-title">Hinterview <em>Insights</em> →</div>
-  </a>
-</div>
-
-</main>
-
-<footer>
-  <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris · Designed and built by me</span>
-    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
-  </div>
-</footer>
-
-<script src="lightbox.js?v=2026-10-25"></script>
+  const links=[...document.querySelectorAll('.toc a')];
+  const mark=id=>links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+id));
+  const sections=[...document.querySelectorAll('.article section[id]')];
+  const spy=()=>{ let cur=sections[0]; sections.forEach(s=>{ if(s.getBoundingClientRect().top<=innerHeight*.3) cur=s }); mark(cur.id) };
+  addEventListener('scroll',spy,{passive:true}); spy();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

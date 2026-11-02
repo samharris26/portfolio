@@ -3,160 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kato Design System | Sam Harris</title>
+<title>Design System | Sam Harris</title>
+<meta name="description" content="Replacing fragmented UI libraries with a scalable, AI-enabled design system.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case-study.css?v=2026-10-25b">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav aria-label="Main">
-  <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html">Sam Harris<b>.</b></a>
-    <div class="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a class="keep" href="contact.html">Contact</a>
-      <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+<div class="app">
+  <aside class="side" aria-label="Main">
+    <div class="side-top">
+      <a class="logo" href="index.html">Sam Harris<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="on" href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav" onclick="this.setAttribute('aria-expanded',document.body.classList.toggle('nav-open'))"></button>
-  </div>
-</nav>
+    <span class="status"><i aria-hidden="true"></i>Open to new roles</span>
+  </aside>
 
-<div class="mobile-nav" id="mobile-nav">
-    <a href="index.html#work" onclick="document.body.classList.remove('nav-open')">Work</a>
-    <a href="index.html#about" onclick="document.body.classList.remove('nav-open')">About</a>
-    <a href="contact.html">Contact</a>
-    <span class="status"><span class="dot" aria-hidden="true"></span>Open to new roles</span>
+  <main class="main cs">
+    <div class="topbar"><a class="logo" href="index.html">Sam Harris<span>.</span></a><span class="status"><i aria-hidden="true"></i>Open to roles</span></div>
+
+    <div class="cs-top">
+      <div class="crumb"><a href="work.html">Work</a><i> / </i>Design System</div>
+      <nav class="pager" aria-label="Other projects">
+        <a href="case-study-atlas.html">← Atlas</a>
+        <a class="fwd" href="case-study-noa.html">Noa →</a>
+      </nav>
+    </div>
+
+    <header class="cs-hero" style="background:var(--lilac)">
+      <div class="cs-hero-copy">
+        <div class="eyebrow" style="color:var(--ink)">Kato · Design System</div>
+        <h1>Unifying design and development through a single system</h1>
+        <p class="intro" style="color:var(--ink)">Replacing fragmented UI libraries with a scalable, AI-enabled design system.</p>
+        <p class="live"><b class="internal">Internal tool</b><span class="sep" aria-hidden="true">·</span><span>Systems and build</span></p>
+      </div>
+      <div class="shot"><img src="https://framerusercontent.com/images/DnTFkgQAmm0Xv2w1i4oUTfAI9c.png" alt="" loading="lazy"></div>
+    </header>
+
+    
+
+    <div class="cs-body">
+      <article class="article">
+        <section id="overview"><div class="measure"><span class="section-label">Overview</span></div><div class="measure"><p class="long">Kato's design and development workflows were split across multiple UI libraries, leading to inconsistency, duplication, and slower iteration.</p><p class="long soft">The goal was to create a single, unified design system that aligned design and engineering, improved consistency, and enabled faster product development, with AI as a first-class part of how the team designs and builds.</p></div></section><section id="problem"><span class="section-label">The problem</span><h2 class="title">Design and development were fragmented</h2><div class="problems"><div class="problem"><span>01</span><p><b>Two UI libraries in use:</b> MUI and Ant Design</p></div><div class="problem"><span>02</span><p><b>Inconsistent patterns and components</b> across the product</p></div><div class="problem"><span>03</span><p><b>No single source of truth</b> for component states or foundations (colour, spacing, typography)</p></div><div class="problem"><span>04</span><p><b>Designers and engineers</b> working from slightly different interpretations</p></div><div class="problem"><span>05</span><p><b>Slow iteration</b> from duplicated effort and unclear implementation details</p></div></div><p class="result"><span>THE RESULT</span>visual inconsistency, increased development overhead, and friction between design and engineering.</p></section><section id="the-approach-01"><div class="measure"><span class="section-label">01 · Approach</span><h2 class="title">Consolidating to a single system</h2></div><div class="measure"><p class="long soft">Moved from multiple UI libraries to a single, consistent system based on shadcn/ui: a unified component set, duplication across MUI and Ant Design removed, and alignment between design and implementation ensured.</p></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/RU1xDzjqfKVGUf5FpqJJvpbY.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/R5j3Tzfsu1Qs5cFSehsUMlm0oQ.png" alt="" loading="lazy"></div></div></section><section id="the-approach-02"><div class="measure"><span class="section-label">02 · Approach</span><h2 class="title">AI-integrated design workflows</h2></div><div class="measure"><p class="long soft">The system's biggest unlock: connecting it to Claude, so the whole product team can design with it, not just designers.</p><ul class="points"><li><b>Connected the design system to Claude:</b> components, variables, and usage rules as context for AI generation</li><li><b>Enabled every product team member</b>, PMs included, to prompt high-fidelity, on-brand prototypes built from real system components</li><li><b>Prototypes push into development environments</b> and are validated with real data; AI-generated code directly informs production-ready features</li><li><b>Removed manual design setup</b> as the bottleneck for exploring and testing ideas</li></ul><div class="note"><span class="section-label">Why it matters</span><p>This workflow is how I now operate as both product designer and front-end developer at Kato: the design system keeps AI output consistent, and AI keeps design and build moving at the same speed.</p></div></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/ujicKWRi6U7J3kPpKDopRYqfPY.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/S5SKPK8Gnu8Rjr9wnaAHnsT7dE.png" alt="" loading="lazy"></div></div></section><section id="the-approach-03"><div class="measure"><span class="section-label">03 · Approach</span><h2 class="title">Foundations &amp; token structure</h2></div><div class="measure"><p class="long soft">A structured foundation layer in Figma (colour system, typography scale, spacing and layout rules, border radius and component styling) built on variables to ensure consistency, enable easy updates and scaling, and maintain alignment with development.</p></div></section><section id="the-approach-04"><div class="measure"><span class="section-label">04 · Approach</span><h2 class="title">Component library with full state coverage</h2></div><div class="measure"><p class="long soft">A comprehensive component library covering all core UI components with full state definitions (default, hover, active, disabled, error) and clear interaction patterns, supported by an interactive documentation site and visual references for how components behave in context. Designers move faster; engineers implement with confidence.</p></div></section><section id="the-approach-05"><div class="measure"><span class="section-label">05 · Approach</span><h2 class="title">Internal documentation &amp; accessibility</h2></div><div class="measure"><p class="long soft">A working, interactive site showing all foundations and components in one place, with clear guidance on usage and behaviour: a shared reference point across teams. The goal: make the system easy to understand and actually used.</p></div><div class="shot-pair"><div class="shot"><img src="https://framerusercontent.com/images/oWSvVh4kEc9T6tClDiCIOgnGHg.png" alt="" loading="lazy"></div><div class="shot"><img src="https://framerusercontent.com/images/ZyyOOHeHmtvc8Gom4pHgyenUCr0.png" alt="" loading="lazy"></div></div></section><section id="outcome"><div class="outcome"><span class="section-label">Outcome</span><ul class="outs"><li>Consolidated multiple UI systems into a single, scalable design system</li><li>Improved consistency across the product and reduced friction between design and engineering</li><li>Increased speed of prototyping and iteration</li><li>Enabled non-designers to generate system-aligned UI through AI</li><li>Established the foundation for faster product development and experimentation</li></ul></div></section><section id="learned"><span class="section-label">What I learned</span><ol class="learn"><li><span>01</span>Design systems only work if they're easy to use and accessible to the whole team</li><li><span>02</span>The biggest gains come from aligning design and engineering, not just organising components</li><li><span>03</span>AI can unlock system usage beyond designers, if the foundations are strong</li></ol></section>
+        <a class="next" href="case-study-noa.html" style="background:var(--peach)"><div class="lead"><div class="label"><span>Next project · Noa</span></div><h2 class="title">Noa</h2><p class="caption">A shared home for a family&#x27;s tasks, calendar and lists</p></div><span class="go-lg" aria-hidden="true">→</span></a>
+      </article>
+
+      <aside class="rail">
+        <nav class="rail-box toc" aria-label="On this page">
+          <span class="section-label">On this page</span>
+          <a href="#overview">Overview</a><a href="#problem">The problem</a><a href="#the-approach-01">01 · Consolidating to a single system</a><a href="#the-approach-02">02 · AI-integrated design workflows</a><a href="#the-approach-03">03 · Foundations &amp; token structure</a><a href="#the-approach-04">04 · Component library with full state coverage</a><a href="#the-approach-05">05 · Internal documentation &amp; accessibility</a><a href="#outcome">Outcome</a><a href="#learned">What I learned</a>
+        </nav>
+        <div class="rail-box">
+          <span class="section-label">Details</span>
+          <dl><div class="kv"><dt>Role</dt><dd>Product Designer<br>AI-assisted front-end</dd></div><div class="kv"><dt>Service</dt><dd>Design systems</dd></div><div class="kv"><dt>Stack</dt><dd>Figma variables · shadcn/ui<br>Claude</dd></div><div class="kv"><dt>Used by</dt><dd>Design, engineering,<br>and the whole product team</dd></div></dl>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="foot" style="margin-top:0">
+      <span>Want the full story? <a href="sam-harris-cv.pdf" target="_blank" rel="noopener">Download my CV</a></span>
+      <a class="mail" href="mailto:samharris26@gmail.com">samharris26@gmail.com</a>
+    </footer>
+  </main>
 </div>
 
-<main id="main">
-<header>
-  <div class="wrap">
-    <p class="eyebrow">Kato <span aria-hidden="true">×</span> case study</p>
-    <h1>Unifying design and development through a <em>single system</em></h1>
-    <p class="hero-sub">Replacing fragmented UI libraries with a scalable, AI-enabled design system.</p>
-    <div class="meta-grid">
-      <div><b>ROLE</b>Product Designer<br>AI-assisted front-end</div>
-      <div><b>SERVICE</b>Design systems</div>
-      <div><b>STACK</b>Figma variables · shadcn/ui<br>Claude</div>
-      <div><b>USED BY</b>Design, engineering,<br>and the whole product team</div>
-    </div>
-    <div class="shot tall hero-shot filled"><img src="https://framerusercontent.com/images/DnTFkgQAmm0Xv2w1i4oUTfAI9c.png" alt="Kato design system"></div>
-  </div>
-</header>
+<nav class="tabs" aria-label="Main"><a href="index.html">Home</a><a class="on" href="work.html" aria-current="page">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="toast" role="status" aria-live="polite"></div>
 
-<section class="cs wrap">
+<script>
+  const toast=document.querySelector('.toast'); let tm;
+  document.querySelectorAll('[data-soon]').forEach(el=>el.addEventListener('click',e=>{
+    e.preventDefault(); toast.textContent=el.dataset.soon+' screen comes next'; toast.classList.add('show');
+    clearTimeout(tm); tm=setTimeout(()=>toast.classList.remove('show'),1800);
+  }));
 
-  <div class="cs-block">
-    <h2 class="cs-label">Overview</h2>
-    <div class="cs-body">
-      <p>Kato's design and development workflows were split across multiple UI libraries, leading to inconsistency, duplication, and slower iteration.</p>
-      <p>The goal was to create a single, unified design system that aligned design and engineering, improved consistency, and enabled faster product development, with AI as a first-class part of how the team designs and builds.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The problem</h2>
-    <div class="cs-body">
-      <p class="dim">Design and development were fragmented:</p>
-      <ul>
-        <li><b>Two UI libraries in use:</b> MUI and Ant Design</li>
-        <li><b>Inconsistent patterns and components</b> across the product</li>
-        <li><b>No single source of truth</b> for component states or foundations (colour, spacing, typography)</li>
-        <li><b>Designers and engineers</b> working from slightly different interpretations</li>
-        <li><b>Slow iteration</b> from duplicated effort and unclear implementation details</li>
-      </ul>
-      <p class="dim">The result: visual inconsistency, increased development overhead, and friction between design and engineering.</p>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">The approach</h2>
-    <div class="cs-body">
-      <h3><span class="n">01</span>Consolidating to a single system</h3>
-      <p>Moved from multiple UI libraries to a single, consistent system based on shadcn/ui: a unified component set, duplication across MUI and Ant Design removed, and alignment between design and implementation ensured.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/RU1xDzjqfKVGUf5FpqJJvpbY.png" alt="Unified component set"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/R5j3Tzfsu1Qs5cFSehsUMlm0oQ.png" alt="System consolidation"></div>
-      </div>
-
-      <h3><span class="n">02</span>AI-integrated design workflows</h3>
-      <p>The system's biggest unlock: connecting it to Claude, so the whole product team can design with it, not just designers.</p>
-      <ul>
-        <li><b>Connected the design system to Claude:</b> components, variables, and usage rules as context for AI generation</li>
-        <li><b>Enabled every product team member</b>, PMs included, to prompt high-fidelity, on-brand prototypes built from real system components</li>
-        <li><b>Prototypes push into development environments</b> and are validated with real data; AI-generated code directly informs production-ready features</li>
-        <li><b>Removed manual design setup</b> as the bottleneck for exploring and testing ideas</li>
-      </ul>
-      <div class="callout">
-        <div class="c-label">Why it matters</div>
-        <p>This workflow is how I now operate as both product designer and front-end developer at Kato: the design system keeps AI output consistent, and AI keeps design and build moving at the same speed.</p>
-      </div>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/ujicKWRi6U7J3kPpKDopRYqfPY.png" alt="Prompt to prototype"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/S5SKPK8Gnu8Rjr9wnaAHnsT7dE.png" alt="AI-generated UI"></div>
-      </div>
-
-      <h3><span class="n">03</span>Foundations &amp; token structure</h3>
-      <p>A structured foundation layer in Figma (colour system, typography scale, spacing and layout rules, border radius and component styling) built on variables to ensure consistency, enable easy updates and scaling, and maintain alignment with development.</p>
-
-      <h3><span class="n">04</span>Component library with full state coverage</h3>
-      <p>A comprehensive component library covering all core UI components with full state definitions (default, hover, active, disabled, error) and clear interaction patterns, supported by an interactive documentation site and visual references for how components behave in context. Designers move faster; engineers implement with confidence.</p>
-
-      <h3><span class="n">05</span>Internal documentation &amp; accessibility</h3>
-      <p>A working, interactive site showing all foundations and components in one place, with clear guidance on usage and behaviour: a shared reference point across teams. The goal: make the system easy to understand and actually used.</p>
-      <div class="shot-row">
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/oWSvVh4kEc9T6tClDiCIOgnGHg.png" alt="Component states"></div>
-        <div class="shot mid filled"><img src="https://framerusercontent.com/images/ZyyOOHeHmtvc8Gom4pHgyenUCr0.png" alt="Documentation site"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Outcome</h2>
-    <div class="cs-body">
-      <ul>
-        <li><b>Consolidated multiple UI systems</b> into a single, scalable design system</li>
-        <li><b>Improved consistency</b> across the product and reduced friction between design and engineering</li>
-        <li><b>Increased speed</b> of prototyping and iteration</li>
-        <li><b>Enabled non-designers</b> to generate system-aligned UI through AI</li>
-        <li><b>Established the foundation</b> for faster product development and experimentation</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="cs-block">
-    <h2 class="cs-label">Learnings</h2>
-    <div class="cs-body">
-      <ul>
-        <li>Design systems only work if they're easy to use and accessible to the whole team</li>
-        <li>The biggest gains come from aligning design and engineering, not just organising components</li>
-        <li>AI can unlock system usage beyond designers, if the foundations are strong</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="next wrap">
-  <a href="case-study-noa.html">
-    <div class="n-label">Next project · 05</div>
-    <div class="n-title"><em>Noa</em>: your life, organised →</div>
-  </a>
-</div>
-
-</main>
-
-<footer>
-  <div class="wrap foot-meta">
-    <span>© 2026 Sam Harris · Designed and built by me</span>
-    <span><a href="index.html">Home</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="contact.html">Contact</a></span>
-  </div>
-</footer>
-
-<script src="lightbox.js?v=2026-10-25"></script>
+  const links=[...document.querySelectorAll('.toc a')];
+  const mark=id=>links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+id));
+  const sections=[...document.querySelectorAll('.article section[id]')];
+  const spy=()=>{ let cur=sections[0]; sections.forEach(s=>{ if(s.getBoundingClientRect().top<=innerHeight*.3) cur=s }); mark(cur.id) };
+  addEventListener('scroll',spy,{passive:true}); spy();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
