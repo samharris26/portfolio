@@ -93,6 +93,9 @@ h1 mark{background:linear-gradient(transparent 62%,var(--lime) 62% 92%,transpare
 .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--border);padding-top:20px;color:var(--text-2);margin-top:-16px}
 .foot a{font-weight:500}
 .foot a.mail{font-weight:400}
+.foot a.also{font-weight:400;color:var(--text-2)}
+.foot a.also b{font-weight:500;color:var(--ink);transition:color .15s}
+.foot a.also:hover,.foot a.also:hover b{color:var(--accent)}
 
 .topbar,.tabs{display:none}
 .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:99px;transition:all .25s;pointer-events:none;z-index:50}
